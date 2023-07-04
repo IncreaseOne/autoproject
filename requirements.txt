@@ -107,7 +107,6 @@ rich
 runstats
 schedule
 Scrapy
-scrapy-zyte-api
 selenium
 service-identity
 simple-tornado
