@@ -1,0 +1,2029 @@
+[2023-06-01 15:21:57,269][MainThread:14020][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 15:55:05,895][MainThread:34120][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 15:55:10,514][Thread-1:19348][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 33, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:55:10,514][Thread-1:19348][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 33, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:56:42,345][MainThread:34120][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\views.py changed, reloading.]
+[2023-06-01 15:56:43,581][MainThread:23880][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 15:56:48,021][Thread-1:10736][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 27, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:56:48,021][Thread-1:10736][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 27, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:57:30,023][MainThread:23880][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\views.py changed, reloading.]
+[2023-06-01 15:57:30,748][MainThread:29656][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 15:57:50,574][MainThread:29656][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\views.py changed, reloading.]
+[2023-06-01 15:57:51,642][MainThread:33388][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 15:57:55,500][Thread-1:36076][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:57:55,500][Thread-1:36076][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:59:15,454][MainThread:33388][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\views.py changed, reloading.]
+[2023-06-01 15:59:16,179][MainThread:19792][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 15:59:20,655][Thread-1:34616][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 15:59:20,655][Thread-1:34616][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:00:53,446][MainThread:19792][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\views.py changed, reloading.]
+[2023-06-01 16:00:54,237][MainThread:26044][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 16:02:30,058][Thread-1:33996][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 33, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:02:30,058][Thread-1:33996][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 33, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:03:14,378][MainThread:20284][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 16:03:17,185][Thread-1:29940][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 33, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:03:17,185][Thread-1:29940][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 33, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:04:01,149][MainThread:20284][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\views.py changed, reloading.]
+[2023-06-01 16:04:01,940][MainThread:40308][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 16:04:04,626][Thread-1:33900][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:04:04,626][Thread-1:33900][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 34, in testCode
+    amazonAutoTest = AmazonAutoTest(tasks=tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 34, in __init__
+    for task in tasks:
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 26, in add_task
+    result = re.findall(compile_amazon, goodsUrl_and_code["goods_url"])[0]
+IndexError: list index out of range
+[2023-06-01 16:07:48,345][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:07:56,193][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:56][INFO][成功登录]
+[2023-06-01 16:07:59,845][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:07:59,874][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:09:07,753][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A2JQSP3NTFXY1T开始验证折扣码]
+[2023-06-01 16:09:17,046][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AI7QNI7QWJPFS开始验证折扣码]
+[2023-06-01 16:09:41,731][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:189][INFO][https://www.amazon.com/dp/B0C28B7F2P?th=1开始验证折扣码]
+[2023-06-01 16:09:48,213][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:189][INFO][https://www.amazon.com/PAWZIDEA-Brushing-Toothbrush-Cleaning-Stainless/dp/B0BHQBR65B?qid=1685521375&keywords=Dog%20Teeth%20Cleaning%20kit开始验证折扣码]
+[2023-06-01 16:09:52,984][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:189][INFO][https://www.amazon.com/CYEVA-Multifunctional-Expander-Holders-Compatible/dp/B0C2HQ2ZHQ/ref=sr_1_81?crid=CN64ON3WYFYK&keywords=Cup+Holder+Tray&qid=1684482554&sprefix=cup+holder+tray%2Caps%2C745&sr=8-81开始验证折扣码]
+[2023-06-01 16:09:58,402][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:189][INFO][https://www.amazon.com/gp/product/B0BN3TKMMK开始验证折扣码]
+[2023-06-01 16:10:04,255][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:189][INFO][https://www.amazon.com/dp/B0BK3T42YR?maas=maas_adg_8FC0B3B865E23AB79822B1D108F2EFDC_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:10:08,639][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:189][INFO][https://www.amazon.com/Sleeping-Pack-Shredded-Adjustable-Sleepers/dp/B0B46D66T3?maas=maas_adg_AC8EBA266F67E9110844DD36538B83F9_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:10:08,692][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:10:42,192][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(4)
+============================================================]
+[2023-06-01 16:12:26,073][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:12:26,073][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:12:45,741][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:12:45,741][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:12:49,173][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C37C64NQ?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:13:01,847][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:13:01,847][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:13:05,199][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B08YJVL8LJ开始验证折扣码]
+[2023-06-01 16:13:10,984][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Handbag-Stylish-Multi-pocket-Shoulder-Crossbody/dp/B0922B167Q开始验证折扣码]
+[2023-06-01 16:13:19,521][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B09DYB71GF开始验证折扣码]
+[2023-06-01 16:13:25,310][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B07W53SV4V?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:14:19,680][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:14:19,680][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:14:33,427][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:14:33,427][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:14:38,635][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Sterling-Butterfly-Earrings-Hypoallergenic-Anniversary/dp/B0BY2F58CR/ref=sr_1_55?crid=1HKJM5N3ETIVN&keywords=hypoallergenic+rose+gold+butterfly+earrings+for+women&qid=1685516364&sprefix=hypoallergenic+rosegold+butterfly+earrings+for+women%2Caps%2C474&sr=8-55开始验证折扣码]
+[2023-06-01 16:16:03,843][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:16:03,843][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:16:08,044][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C1NSGGXN?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:16:08,439][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:16:43,730][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(6)
+============================================================]
+[2023-06-01 16:16:48,100][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:16:48,360][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:16:49,032][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:16:49,985][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:17:59,802][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A18QZBYWXY63FH开始验证折扣码]
+[2023-06-01 16:18:15,676][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AOV4WFOAVBZOB开始验证折扣码]
+[2023-06-01 16:18:36,276][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A21XW65RYRCT31开始验证折扣码]
+[2023-06-01 16:18:37,764][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:18:37,764][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:18:47,674][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/ACLLD7LSIT4X1开始验证折扣码]
+[2023-06-01 16:18:53,958][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:18:53,958][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:19:10,290][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C46KVPJF开始验证折扣码]
+[2023-06-01 16:19:16,444][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Aisansty-Necklaces-Handmade-Personalized-Adjustable/dp/B0888FJD91/ref=sr_1_4?m=A209N2SWTOAO1R&marketplaceID=ATVPDKIKX0DER&qid=1685501472&s=merchant-items&sr=1-4&th=1开始验证折扣码]
+[2023-06-01 16:20:19,856][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Container-Decorative-Canister-Terrarium-organizer/dp/B08SCBJT37开始验证折扣码]
+[2023-06-01 16:20:20,072][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B09B3RYGJ6开始验证折扣码]
+[2023-06-01 16:20:20,749][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:20:57,573][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(7)
+============================================================]
+[2023-06-01 16:21:04,231][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:21:04,322][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:22:32,231][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AF2QYZOFD9QAS开始验证折扣码]
+[2023-06-01 16:22:34,106][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/ATG33NNLXJRCL开始验证折扣码]
+[2023-06-01 16:22:44,415][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:22:44,415][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:22:45,137][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:22:45,137][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:22:46,200][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:22:46,200][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:23:16,844][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:23:16,844][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:23:21,393][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Pack-Heatless-Curler-Curls-Headband/dp/B0B2978N8D开始验证折扣码]
+[2023-06-01 16:23:29,440][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BX2K5L54?maas=maas_adg_37456D440DD13FE25937E411273D4DF2_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:24:32,819][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQR4TLF6?m=A2NCQHSPZPBDTY&ref=mpc_asin_image开始验证折扣码]
+[2023-06-01 16:24:34,647][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:24:34,647][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:24:43,408][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:24:43,408][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:24:50,616][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B08JYMMXDC?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:26:16,433][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BX2NB5K4?maas=maas_adg_4F39F7ABC7C8705E50EC78F3C58455F4_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:26:24,556][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BMKPHL27?maas=maas_adg_BB4145236EBB0C3FE1501E970F89F923_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:26:24,969][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:27:02,615][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(8)
+============================================================]
+[2023-06-01 16:27:06,067][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:27:06,440][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:27:06,907][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:27:07,757][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:27:09,141][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:28:35,107][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A34AO80G9N3WR3开始验证折扣码]
+[2023-06-01 16:28:37,020][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:37,020][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:38,335][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:28:41,749][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A14IHB4PO3R0EX开始验证折扣码]
+[2023-06-01 16:28:45,739][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:45,739][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:46,461][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:46,461][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:47,437][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:47,437][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:28:51,135][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A21QB51QXJ92XX开始验证折扣码]
+[2023-06-01 16:29:10,216][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A28ALIZ61CVZAU开始验证折扣码]
+[2023-06-01 16:29:53,963][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A21QB51QXJ92XX开始验证折扣码]
+[2023-06-01 16:30:21,995][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Bath-Loofahs/dp/B0BZ93YWT3开始验证折扣码]
+[2023-06-01 16:30:41,031][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/FOSSiBOT-F2400-Portable-Generator-Emergency/dp/B0BVGLL8ZZ/ref=sr_1_3?keywords=fossibot+f2400+portable+power+station&qid=1685447293&sr=8-3开始验证折扣码]
+[2023-06-01 16:30:42,909][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BHN8WLXL?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:30:43,378][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:31:37,075][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(10)
+============================================================]
+[2023-06-01 16:32:08,943][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 16:32:08,943][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 16:32:40,078][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 16:32:40,078][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 16:33:10,969][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 16:33:10,969][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 16:33:13,384][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:33:13,384][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:33:17,554][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:33:17,554][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:33:21,936][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:33:21,936][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:33:45,314][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:33:45,314][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:33:48,091][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:33:48,091][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:33:56,655][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B0B7B8D7B5开始验证折扣码]
+[2023-06-01 16:34:05,744][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BVDG8BMM?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:34:52,606][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:34:52,606][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:34:59,704][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BRCKNXBF?ref=myi_title_dp&th=1开始验证折扣码]
+[2023-06-01 16:35:22,843][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:35:22,843][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:35:28,173][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C6JXD8BW?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:35:33,181][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BR8QM2QV?maas=maas_adg_08DA587A85729206A45A3BE84AA19B2C_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:36:24,507][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:36:24,507][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:37:05,021][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQBYG7TQ?ref=myi_title_dp&th=1开始验证折扣码]
+[2023-06-01 16:37:05,401][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:37:47,563][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(11)
+============================================================]
+[2023-06-01 16:37:52,257][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:37:52,743][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:39:18,219][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AVPN3XHEFM4SG开始验证折扣码]
+[2023-06-01 16:39:24,630][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:39:24,630][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:39:28,533][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A64VYJE3C5UB3开始验证折扣码]
+[2023-06-01 16:39:35,322][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:39:35,322][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:39:38,465][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:39:38,465][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:39:59,518][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQRDD52Q开始验证折扣码]
+[2023-06-01 16:40:15,636][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:40:15,636][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:40:31,854][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:40:31,854][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:40:49,422][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Funlover-Portable-Vibration-Rechargeable-Menstrual/dp/B0BWNCQGL9/?m=A3QLG3NSJ9YEV5开始验证折扣码]
+[2023-06-01 16:41:20,666][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BPY2K791?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:41:24,730][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B0C6CWNCQK?th=1&psc=1开始验证折扣码]
+[2023-06-01 16:42:00,678][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQBHXMMY?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:42:39,833][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BPYL9KK7开始验证折扣码]
+[2023-06-01 16:42:40,231][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:43:32,197][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(10)
+============================================================]
+[2023-06-01 16:43:36,135][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:43:36,492][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:43:44,790][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:44:23,347][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,347][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,356][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,356][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,371][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,371][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,394][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 16:44:23,394][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 16:44:33,326][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.]
+[2023-06-01 16:44:33,326][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.]
+[2023-06-01 16:44:33,340][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:63][INFO][重新登录, 剩余登录次数:4]
+[2023-06-01 16:45:04,009][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A3JLL8GFNT1V8开始验证折扣码]
+[2023-06-01 16:45:15,038][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A177MFE0YGKM4B?maas=maas_adg_67AB36769081655FEDC4FCEE0C444784_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:45:24,434][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:45:55,290][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:45:55,290][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:45:55,291][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:63][INFO][重新登录, 剩余登录次数:3]
+[2023-06-01 16:45:57,117][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BVZHFMKV?th=1开始验证折扣码]
+[2023-06-01 16:45:58,964][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:45:58,964][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:46:01,251][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".a-checkbox.a-checkbox-fancy i").last
+  locator resolved to <i class="a-icon a-icon-checkbox"></i>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not visible - waiting...
+============================================================]
+[2023-06-01 16:46:01,251][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".a-checkbox.a-checkbox-fancy i").last
+  locator resolved to <i class="a-icon a-icon-checkbox"></i>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not visible - waiting...
+============================================================]
+[2023-06-01 16:46:12,663][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:46:26,658][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:46:28,051][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 16:46:44,463][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:46:44,463][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:46:44,464][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:63][INFO][重新登录, 剩余登录次数:2]
+[2023-06-01 16:47:13,571][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:47:16,485][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".a-checkbox.a-checkbox-fancy i").last
+  locator resolved to <i class="a-icon a-icon-checkbox"></i>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not visible - waiting...
+============================================================]
+[2023-06-01 16:47:16,485][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:264][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".a-checkbox.a-checkbox-fancy i").last
+  locator resolved to <i class="a-icon a-icon-checkbox"></i>
+attempting click action
+  waiting for element to be visible, enabled and stable
+    element is not visible - waiting...
+============================================================]
+[2023-06-01 16:47:19,219][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BXNX9KNN开始验证折扣码]
+[2023-06-01 16:47:44,779][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:47:44,779][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:47:44,780][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:63][INFO][重新登录, 剩余登录次数:1]
+[2023-06-01 16:47:59,905][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:48:31,841][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:48:31,841][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:48:31,843][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:63][INFO][重新登录, 剩余登录次数:0]
+[2023-06-01 16:48:43,611][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:49:16,146][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:49:16,146][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:60][ERROR][登录失败:Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#ap_email")
+============================================================]
+[2023-06-01 16:49:16,147][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:67][INFO][登录失败超过限制，不再重新登录]
+[2023-06-01 16:49:16,181][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: 'NoneType' object has no attribute 'goto']
+[2023-06-01 16:49:16,181][Thread-1:33900][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: 'NoneType' object has no attribute 'goto']
+[2023-06-01 16:49:16,338][Thread-1:33900][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 251, in start_test_code
+    page = await self.goods_detail(page, amazon_info)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 74, in goods_detail
+    await page.goto(amazon_info["goods_url"], timeout=50000)
+AttributeError: 'NoneType' object has no attribute 'goto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 35, in testCode
+    result = asyncio.run(amazonAutoTest.do_task())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 296, in do_task
+    result = await asyncio.gather(*tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 261, in start_test_code
+    await page.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2023-06-01 16:49:16,338][Thread-1:33900][task_id:django.request][log.py:241][ERROR][Internal Server Error: /amazonWebsite/testCode/]
+Traceback (most recent call last):
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 251, in start_test_code
+    page = await self.goods_detail(page, amazon_info)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 74, in goods_detail
+    await page.goto(amazon_info["goods_url"], timeout=50000)
+AttributeError: 'NoneType' object has no attribute 'goto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\AutoTestCode(1)\TestAmazonCode\views.py", line 35, in testCode
+    result = asyncio.run(amazonAutoTest.do_task())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 296, in do_task
+    result = await asyncio.gather(*tasks)
+  File "F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py", line 261, in start_test_code
+    await page.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2023-06-01 16:52:40,963][MainThread:40308][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py changed, reloading.]
+[2023-06-01 16:52:42,011][MainThread:29256][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-01 16:52:52,929][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:44][INFO][成功进入amazon主页]
+[2023-06-01 16:52:59,742][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:56][INFO][成功登录]
+[2023-06-01 16:53:04,697][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:53:04,758][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 16:54:13,062][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A2JQSP3NTFXY1T开始验证折扣码]
+[2023-06-01 16:54:28,290][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AI7QNI7QWJPFS开始验证折扣码]
+[2023-06-01 16:54:38,493][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:38,493][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:41,261][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:41,261][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:41,707][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:41,707][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:42,927][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:54:42,927][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:55:15,477][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:55:15,477][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:55:29,135][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C28B7F2P?th=1开始验证折扣码]
+[2023-06-01 16:56:07,221][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:56:07,221][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:56:09,801][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:56:09,801][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 16:56:17,097][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:56:17,097][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:56:33,859][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/CYEVA-Multifunctional-Expander-Holders-Compatible/dp/B0C2HQ2ZHQ/ref=sr_1_81?crid=CN64ON3WYFYK&keywords=Cup+Holder+Tray&qid=1684482554&sprefix=cup+holder+tray%2Caps%2C745&sr=8-81开始验证折扣码]
+[2023-06-01 16:56:41,880][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:56:41,880][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:57:20,436][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Sleeping-Pack-Shredded-Adjustable-Sleepers/dp/B0B46D66T3?maas=maas_adg_AC8EBA266F67E9110844DD36538B83F9_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:57:53,376][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:57:53,376][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:58:07,063][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:58:07,063][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 16:58:32,344][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BK3T42YR?maas=maas_adg_8FC0B3B865E23AB79822B1D108F2EFDC_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 16:58:32,785][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 16:59:17,192][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(13)
+============================================================]
+[2023-06-01 17:01:11,333][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:11,333][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:13,810][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B09V7PHXM6开始验证折扣码]
+[2023-06-01 17:01:17,895][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:17,895][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:22,935][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:22,935][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:37,776][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:37,776][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:01:38,073][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Sterling-Butterfly-Earrings-Hypoallergenic-Anniversary/dp/B0BY2F58CR/ref=sr_1_55?crid=1HKJM5N3ETIVN&keywords=hypoallergenic+rose+gold+butterfly+earrings+for+women&qid=1685516364&sprefix=hypoallergenic+rosegold+butterfly+earrings+for+women%2Caps%2C474&sr=8-55开始验证折扣码]
+[2023-06-01 17:01:44,592][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Handbag-Stylish-Multi-pocket-Shoulder-Crossbody/dp/B0922B167Q开始验证折扣码]
+[2023-06-01 17:01:50,224][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B08YJVL8LJ开始验证折扣码]
+[2023-06-01 17:02:30,237][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C37C64NQ?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:02:33,251][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C1NSGGXN?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:02:34,440][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:02:34,440][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:03:10,216][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:03:10,216][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:03:39,509][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B09DYB71GF开始验证折扣码]
+[2023-06-01 17:04:38,928][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:04:38,928][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:04:38,973][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:05:12,952][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(5)
+============================================================]
+[2023-06-01 17:05:17,221][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:05:17,274][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:05:17,488][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:05:17,991][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:06:47,027][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A21XW65RYRCT31开始验证折扣码]
+[2023-06-01 17:07:00,775][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AOV4WFOAVBZOB开始验证折扣码]
+[2023-06-01 17:07:12,894][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A18QZBYWXY63FH开始验证折扣码]
+[2023-06-01 17:07:22,834][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:07:22,834][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:07:25,705][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/ACLLD7LSIT4X1开始验证折扣码]
+[2023-06-01 17:07:28,429][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Aisansty-Necklaces-Handmade-Personalized-Adjustable/dp/B0888FJD91/ref=sr_1_4?m=A209N2SWTOAO1R&marketplaceID=ATVPDKIKX0DER&qid=1685501472&s=merchant-items&sr=1-4&th=1开始验证折扣码]
+[2023-06-01 17:07:35,415][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C46KVPJF开始验证折扣码]
+[2023-06-01 17:07:47,913][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Container-Decorative-Canister-Terrarium-organizer/dp/B08SCBJT37开始验证折扣码]
+[2023-06-01 17:08:57,684][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B09B3RYGJ6开始验证折扣码]
+[2023-06-01 17:08:58,110][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:09:33,587][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(6)
+============================================================]
+[2023-06-01 17:09:38,198][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:09:40,352][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:11:03,097][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:11:03,097][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:11:03,432][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:11:03,432][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:11:20,860][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AF2QYZOFD9QAS开始验证折扣码]
+[2023-06-01 17:11:22,164][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:11:22,164][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:11:23,095][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/ATG33NNLXJRCL开始验证折扣码]
+[2023-06-01 17:11:30,735][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:11:30,735][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:11:36,964][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:11:36,964][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:11:47,781][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BX2K5L54?maas=maas_adg_37456D440DD13FE25937E411273D4DF2_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 17:12:32,243][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BX2NB5K4?maas=maas_adg_4F39F7ABC7C8705E50EC78F3C58455F4_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 17:12:49,233][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:12:49,233][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:12:50,005][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQR4TLF6?m=A2NCQHSPZPBDTY&ref=mpc_asin_image开始验证折扣码]
+[2023-06-01 17:12:54,394][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BMKPHL27?maas=maas_adg_BB4145236EBB0C3FE1501E970F89F923_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 17:13:19,838][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:13:19,838][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:14:29,726][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B08JYMMXDC?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:14:36,953][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Pack-Heatless-Curler-Curls-Headband/dp/B0B2978N8D开始验证折扣码]
+[2023-06-01 17:14:37,386][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:15:12,758][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(7)
+============================================================]
+[2023-06-01 17:15:15,846][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:15:16,305][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:15:16,658][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:15:18,117][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:15:18,856][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:16:37,826][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A34AO80G9N3WR3开始验证折扣码]
+[2023-06-01 17:16:43,096][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:43,096][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:44,340][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:16:46,746][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A21QB51QXJ92XX开始验证折扣码]
+[2023-06-01 17:16:49,261][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:49,261][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:50,144][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:50,144][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:51,164][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:51,164][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:16:53,035][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A14IHB4PO3R0EX开始验证折扣码]
+[2023-06-01 17:17:18,133][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A28ALIZ61CVZAU开始验证折扣码]
+[2023-06-01 17:18:06,239][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Bath-Loofahs/dp/B0BZ93YWT3开始验证折扣码]
+[2023-06-01 17:18:06,317][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A21QB51QXJ92XX开始验证折扣码]
+[2023-06-01 17:18:34,944][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BHN8WLXL?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:18:37,840][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/FOSSiBOT-F2400-Portable-Generator-Emergency/dp/B0BVGLL8ZZ/ref=sr_1_3?keywords=fossibot+f2400+portable+power+station&qid=1685447293&sr=8-3开始验证折扣码]
+[2023-06-01 17:18:38,197][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:19:17,919][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(10)
+============================================================]
+[2023-06-01 17:19:49,803][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:19:49,803][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:20:20,697][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:20:20,697][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:20:28,733][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:20:28,733][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:20:51,766][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:20:51,766][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:20:57,800][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:20:57,800][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:03,050][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:03,050][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:04,991][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:04,991][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:14,252][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:14,252][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:17,967][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B0B7B8D7B5开始验证折扣码]
+[2023-06-01 17:21:32,840][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:32,840][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:21:44,133][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BR8QM2QV?maas=maas_adg_08DA587A85729206A45A3BE84AA19B2C_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 17:22:26,843][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0C6JXD8BW?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:22:35,366][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:22:35,366][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:22:43,232][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:22:43,232][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:22:50,325][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BVDG8BMM?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:23:14,499][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQBYG7TQ?ref=myi_title_dp&th=1开始验证折扣码]
+[2023-06-01 17:24:04,287][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:24:04,287][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:24:23,830][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BRCKNXBF?ref=myi_title_dp&th=1开始验证折扣码]
+[2023-06-01 17:24:24,185][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:25:03,790][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(9)
+============================================================]
+[2023-06-01 17:25:18,874][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:25:18,932][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:26:40,139][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AVPN3XHEFM4SG开始验证折扣码]
+[2023-06-01 17:26:51,194][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:26:51,194][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:26:51,544][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:26:51,544][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:26:51,760][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:26:51,760][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:26:53,488][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BPYL9KK7开始验证折扣码]
+[2023-06-01 17:26:53,881][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A64VYJE3C5UB3开始验证折扣码]
+[2023-06-01 17:27:16,978][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Funlover-Portable-Vibration-Rechargeable-Menstrual/dp/B0BWNCQGL9/?m=A3QLG3NSJ9YEV5开始验证折扣码]
+[2023-06-01 17:27:43,606][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQRDD52Q开始验证折扣码]
+[2023-06-01 17:28:39,722][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/gp/product/B0C6CWNCQK?th=1&psc=1开始验证折扣码]
+[2023-06-01 17:28:57,406][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:28:57,406][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:29:05,409][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BQBHXMMY?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:30:12,230][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BPY2K791?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:30:12,641][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:31:00,317][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(9)
+============================================================]
+[2023-06-01 17:31:06,737][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:31:06,798][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:31:51,369][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,369][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,378][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,378][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,400][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,400][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,427][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,427][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,456][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BXNX9KNN", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,456][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BXNX9KNN", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,498][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B8WYLQXV?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:31:51,498][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B8WYLQXV?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:32:37,461][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A177MFE0YGKM4B?maas=maas_adg_67AB36769081655FEDC4FCEE0C444784_afap_abs&ref_=aa_maas&tag=maas开始验证折扣码]
+[2023-06-01 17:32:42,118][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,118][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,172][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,172][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,261][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,261][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,308][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 17:32:42,308][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 17:32:49,715][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A3JLL8GFNT1V8开始验证折扣码]
+[2023-06-01 17:33:32,484][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,484][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,776][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,776][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0B9GVG6DC?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,808][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,808][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BJZQ5MFH?ref=myi_title_dp", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,852][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 17:33:32,852][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 50000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com/dp/B0BVZHFMKV?th=1", waiting until "load"
+============================================================]
+[2023-06-01 17:34:00,431][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:34:00,431][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:34:18,179][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BXNX9KNN开始验证折扣码]
+[2023-06-01 17:35:36,152][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:35:36,152][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:35:36,194][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:36:11,983][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(7)
+============================================================]
+[2023-06-01 17:36:49,530][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:36:49,530][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:37:25,643][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:37:25,643][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:38:01,913][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:38:01,913][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:265][ERROR][超过失败次数,不再重跑：Locator expected to be enabled
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_enabled with timeout 30000ms
+waiting for locator("#add-to-cart-button")]
+[2023-06-01 17:38:01,957][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:38:39,476][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(3)
+============================================================]
+[2023-06-01 17:38:44,322][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:40:03,740][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/AHTZPZ04YI1XA开始验证折扣码]
+[2023-06-01 17:40:28,410][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/Hardware-Adjustable-Extensions-Oversized-Installation/dp/B0BMDQNKHL开始验证折扣码]
+[2023-06-01 17:40:54,846][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:40:54,846][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:40:57,745][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B09N7P8WR8开始验证折扣码]
+[2023-06-01 17:41:03,347][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B09Y4BVZDC/ref=twister_B0B8X36SQ2?_encoding=UTF8&th=1开始验证折扣码]
+[2023-06-01 17:42:33,074][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B09Y4BVZDC/ref=twister_B0B8X36SQ2?_encoding=UTF8&psc=1开始验证折扣码]
+[2023-06-01 17:42:33,443][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:43:08,224][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(6)
+============================================================]
+[2023-06-01 17:43:11,220][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:43:11,517][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:43:11,617][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:44:31,233][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A2QK4202E8ZQ1F开始验证折扣码]
+[2023-06-01 17:44:41,974][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A4TVYJY9C0X1K开始验证折扣码]
+[2023-06-01 17:44:42,278][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:44:42,278][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#sc-buy-box-ptc-button")
+  locator resolved to <span data-csa-c-type="widget" id="sc-buy-box-ptc-butt…>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+  click action done
+  waiting for scheduled navigations to finish
+============================================================]
+[2023-06-01 17:44:43,325][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A1YR3WHK3DWMV8开始验证折扣码]
+[2023-06-01 17:45:17,232][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BYS1ZRQ8?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:45:20,838][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:45:20,838][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:260][ERROR][折扣码测试失败, 重新测试, 报错: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".pmts-claim-code")
+============================================================]
+[2023-06-01 17:45:24,508][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0923N157Q开始验证折扣码]
+[2023-06-01 17:46:22,990][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BLSF1R9C开始验证折扣码]
+[2023-06-01 17:46:25,759][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:160][INFO][https://www.amazon.com/dp/B0BMLNNB4L?ref=myi_title_dp开始验证折扣码]
+[2023-06-01 17:46:26,179][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:47:40,814][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(6)
+============================================================]
+[2023-06-01 17:47:55,562][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:76][INFO][检测类型为社交类型]
+[2023-06-01 17:49:13,675][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:140][INFO][https://www.amazon.com/promocode/A330XKIB156AXN开始验证折扣码]
+[2023-06-01 17:49:13,736][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:201][INFO][开始删除购物车每次执行任务的内容]
+[2023-06-01 17:49:47,783][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:212][INFO][删除购物车失败Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(4)
+============================================================]
+[2023-06-01 17:49:47,784][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:288][INFO][任务全部完成]
+[2023-06-01 17:49:47,784][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:216][INFO][开始删除购物车所有内容]
+[2023-06-01 17:50:21,481][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:230][INFO][重新删除购物车Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".sc-action-delete > .a-declarative > input").nth(2)
+============================================================]
+[2023-06-01 17:50:21,482][Thread-1:38112][task_id:TestAmazonCode.AmzonSelenium][AmzonSelenium.py:216][INFO][开始删除购物车所有内容]
+[2023-06-01 17:55:53,890][MainThread:29256][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py changed, reloading.]
+[2023-06-01 17:55:55,189][MainThread:25068][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-02 09:16:11,512][MainThread:25068][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py changed, reloading.]

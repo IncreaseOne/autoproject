@@ -1,0 +1,3 @@
+[2023-06-07 16:05:56,239][MainThread:30212][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-06-07 16:06:34,963][MainThread:30212][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode(1)\TestAmazonCode\AmzonSelenium.py changed, reloading.]
+[2023-06-07 16:06:36,419][MainThread:12436][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
