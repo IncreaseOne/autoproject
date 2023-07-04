@@ -72,6 +72,7 @@ class AutoScreenshot():
                 # proxy={"server": "http://127.0.0.1:19180"})
             context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             await self.screenshot(context)
+
             await context.close()
             await browser.close()
             return self.results
