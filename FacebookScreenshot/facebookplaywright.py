@@ -65,7 +65,7 @@ class AutoScreenshot():
         await page.close()
 
     async def run(self):
-        async with async_playwright() as playwright:
+            playwright = await async_playwright().start()
             chromium = playwright.chromium
             browser = await chromium.launch(
                 headless=True)
