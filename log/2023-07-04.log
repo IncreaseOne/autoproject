@@ -1,0 +1,564 @@
+[2023-07-04 16:03:14,156][MainThread:14108][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:03:56,021][Thread-1:21444][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    event_loop = asyncio.get_event_loop()
+  File "C:\Program Files\python3.9\lib\asyncio\events.py", line 642, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1'.
+[2023-07-04 16:03:56,021][Thread-1:21444][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    event_loop = asyncio.get_event_loop()
+  File "C:\Program Files\python3.9\lib\asyncio\events.py", line 642, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1'.
+[2023-07-04 16:06:49,901][MainThread:14108][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\views.py changed, reloading.]
+[2023-07-04 16:06:50,759][MainThread:9112][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:07:20,552][Thread-1:26380][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 73, in run
+    await self.screenshot(context)
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 38, in screenshot
+    await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 9204, in goto
+    await self._impl_obj.goto(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_page.py", line 495, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_frame.py", line 147, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: net::ERR_CONNECTION_TIMED_OUT at https://www.facebook.com/search/top/?q=75J7RQFX
+=========================== logs ===========================
+navigating to "https://www.facebook.com/search/top/?q=75J7RQFX", waiting until "domcontentloaded"
+============================================================
+[2023-07-04 16:07:20,552][Thread-1:26380][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 73, in run
+    await self.screenshot(context)
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 38, in screenshot
+    await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 9204, in goto
+    await self._impl_obj.goto(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_page.py", line 495, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_frame.py", line 147, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: net::ERR_CONNECTION_TIMED_OUT at https://www.facebook.com/search/top/?q=75J7RQFX
+=========================== logs ===========================
+navigating to "https://www.facebook.com/search/top/?q=75J7RQFX", waiting until "domcontentloaded"
+============================================================
+[2023-07-04 16:08:47,205][MainThread:9112][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py changed, reloading.]
+[2023-07-04 16:08:48,022][MainThread:10036][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:08:59,952][MainThread:10036][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py changed, reloading.]
+[2023-07-04 16:09:00,716][MainThread:33280][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:09:05,274][Thread-1:23212][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 70, in run
+    browser = await chromium.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 14476, in launch
+    await self._impl_obj.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_browser_type.py", line 93, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: proxy.server: expected string, got undefined
+[2023-07-04 16:09:05,274][Thread-1:23212][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 70, in run
+    browser = await chromium.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 14476, in launch
+    await self._impl_obj.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_browser_type.py", line 93, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: proxy.server: expected string, got undefined
+[2023-07-04 16:09:43,848][MainThread:33280][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py changed, reloading.]
+[2023-07-04 16:09:44,505][MainThread:30260][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:09:49,560][Thread-1:28684][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 70, in run
+    browser = await chromium.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 14476, in launch
+    await self._impl_obj.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_browser_type.py", line 93, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: proxy.server: expected string, got undefined
+[2023-07-04 16:09:49,560][Thread-1:28684][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 70, in run
+    browser = await chromium.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 14476, in launch
+    await self._impl_obj.launch(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_browser_type.py", line 93, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: proxy.server: expected string, got undefined
+[2023-07-04 16:13:39,419][MainThread:30260][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py changed, reloading.]
+[2023-07-04 16:13:40,146][MainThread:24044][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:13:52,050][Thread-1:31096][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 74, in run
+    await self.screenshot(context)
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 38, in screenshot
+    await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 9204, in goto
+    await self._impl_obj.goto(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_page.py", line 495, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_frame.py", line 147, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: net::ERR_PROXY_CONNECTION_FAILED at https://www.facebook.com/search/top/?q=75J7RQFX
+=========================== logs ===========================
+navigating to "https://www.facebook.com/search/top/?q=75J7RQFX", waiting until "domcontentloaded"
+============================================================
+[2023-07-04 16:13:52,050][Thread-1:31096][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.run(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 74, in run
+    await self.screenshot(context)
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 38, in screenshot
+    await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 9204, in goto
+    await self._impl_obj.goto(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_page.py", line 495, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_frame.py", line 147, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: net::ERR_PROXY_CONNECTION_FAILED at https://www.facebook.com/search/top/?q=75J7RQFX
+=========================== logs ===========================
+navigating to "https://www.facebook.com/search/top/?q=75J7RQFX", waiting until "domcontentloaded"
+============================================================
+[2023-07-04 16:17:52,712][MainThread:24044][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\views.py changed, reloading.]
+[2023-07-04 16:17:53,374][MainThread:29060][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:18:14,918][Thread-1:25548][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.get_event_loop().run_until_complete(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\events.py", line 642, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1'.
+[2023-07-04 16:18:14,918][Thread-1:25548][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.get_event_loop().run_until_complete(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\events.py", line 642, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1'.
+[2023-07-04 16:19:56,762][MainThread:20352][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:19:59,904][Thread-1:1792][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.get_event_loop().run_until_complete(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\events.py", line 642, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1'.
+[2023-07-04 16:19:59,904][Thread-1:1792][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 20, in post
+    results = asyncio.get_event_loop().run_until_complete(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\events.py", line 642, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1'.
+[2023-07-04 16:22:58,486][MainThread:20352][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\views.py changed, reloading.]
+[2023-07-04 16:22:59,948][MainThread:23080][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2023-07-04 16:23:09,618][Thread-1:16908][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 22, in post
+    results = loop.run_until_complete(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 74, in run
+    await self.screenshot(context)
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 38, in screenshot
+    await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 9204, in goto
+    await self._impl_obj.goto(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_page.py", line 495, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_frame.py", line 147, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: net::ERR_PROXY_CONNECTION_FAILED at https://www.facebook.com/search/top/?q=75J7RQFX
+=========================== logs ===========================
+navigating to "https://www.facebook.com/search/top/?q=75J7RQFX", waiting until "domcontentloaded"
+============================================================
+[2023-07-04 16:23:09,618][Thread-1:16908][task_id:django.request][log.py:241][ERROR][Internal Server Error: /facebookWebsite/facebook]
+Traceback (most recent call last):
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Program Files\python3.9\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Program Files\python3.9\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\AutoTestCode\FacebookScreenshot\views.py", line 22, in post
+    results = loop.run_until_complete(screen_shot.run())
+  File "C:\Program Files\python3.9\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 74, in run
+    await self.screenshot(context)
+  File "F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py", line 38, in screenshot
+    await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\async_api\_generated.py", line 9204, in goto
+    await self._impl_obj.goto(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_page.py", line 495, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_frame.py", line 147, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 61, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 461, in wrap_api_call
+    return await cb()
+  File "C:\Program Files\python3.9\lib\site-packages\playwright\_impl\_connection.py", line 96, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._api_types.Error: net::ERR_PROXY_CONNECTION_FAILED at https://www.facebook.com/search/top/?q=75J7RQFX
+=========================== logs ===========================
+navigating to "https://www.facebook.com/search/top/?q=75J7RQFX", waiting until "domcontentloaded"
+============================================================
+[2023-07-04 16:24:37,472][MainThread:23080][task_id:django.utils.autoreload][autoreload.py:266][INFO][F:\AutoTestCode\FacebookScreenshot\facebookplaywright.py changed, reloading.]
+[2023-07-04 16:24:38,236][MainThread:19060][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
