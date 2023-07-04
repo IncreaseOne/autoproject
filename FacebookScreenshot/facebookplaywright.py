@@ -75,6 +75,7 @@ class AutoScreenshot():
 
             await context.close()
             await browser.close()
+            await playwright.stop()
             return self.results
 
     # async def login_account(self, accounts: list):
