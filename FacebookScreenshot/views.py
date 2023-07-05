@@ -24,7 +24,7 @@ class Facebook(APIView):
 
 
 
-    def get(self):
+    def get(self, request):
         import asyncio
 
         from playwright.async_api import async_playwright
