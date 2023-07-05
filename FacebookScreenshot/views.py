@@ -29,17 +29,18 @@ class Facebook(APIView):
         import asyncio
 
         from playwright.async_api import async_playwright
+        from playwright.sync_api import sync_playwright
 
-        async def run():
+        def run():
             os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
-            async with async_playwright() as playwright:
-                chromium = playwright.chromium  # or "firefox" or "webkit".
-                browser = await chromium.launch(
-                    headless=True)
-                context = await browser.new_context()
-                page = await context.new_page()
-                await page.goto("https://www.baidu.com")
-                await browser.close()
+            playwright = sync_playwright().start()
+            chromium = playwright.chromium  # or "firefox" or "webkit".
+            browser = chromium.launch(
+                headless=True)
+            context = browser.new_context()
+            page = context.new_page()
+            page.goto("https://www.baidu.com")
+            browser.close()
 
-        asyncio.run(run())
+        run()
         return JsonResponse({"code": 200})
