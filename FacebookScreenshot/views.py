@@ -1,3 +1,4 @@
+import os
 import time
 
 from django.http import JsonResponse, HttpResponse
@@ -30,6 +31,7 @@ class Facebook(APIView):
         from playwright.async_api import async_playwright
 
         async def run():
+            os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
             async with async_playwright() as playwright:
                 chromium = playwright.chromium  # or "firefox" or "webkit".
                 browser = await chromium.launch(
