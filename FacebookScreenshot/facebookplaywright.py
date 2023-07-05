@@ -15,8 +15,6 @@ import queue
 
 
 class AutoScreenshot():
-    USERNAME = "czh18030315579@gmail.com"
-    PASSWORD = "chen.1314520"
     main_page = "https://www.facebook.com"
 
     def __init__(self, code):
@@ -36,14 +34,9 @@ class AutoScreenshot():
     async def screenshot(self, context):
         page = await context.new_page()
         await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
-        # try:
-        #     await expect(page.get_by_role(role="article").first).to_have_text(re.compile())
-        # except:
-        #     return False
-        # 点击展开
         if await page.get_by_text("展开").count() > 0:
-            zankai = await page.get_by_text("展开").all()
-            for i in zankai:
+            expands = await page.get_by_text("展开").all()
+            for i in expands:
                 try:
                     await i.click()
                 except:
@@ -59,7 +52,7 @@ class AutoScreenshot():
                         pass
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
         for i in need_to_screenshot:
-            #await i.scroll_into_view_if_needed(timeout=30000)
+
             screenshot_bytes = await i.screenshot()
             self.results.append(base64.b64encode(screenshot_bytes).decode("utf-8"))
         await page.close()
@@ -69,10 +62,8 @@ class AutoScreenshot():
             chromium = playwright.chromium
             browser = await chromium.launch(
                 headless=True)
-                # proxy={"server": "http://127.0.0.1:19180"})
             context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             await self.screenshot(context)
-
             await context.close()
             await browser.close()
             return self.results
