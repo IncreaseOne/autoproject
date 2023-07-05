@@ -14,12 +14,12 @@ class Facebook(APIView):
 
     def post(self, request):
         code = request.data.get("code")
-        print(code)
+        if code:
+            return JsonResponse({"code": 200, "message": "成功"}, json_dumps_params={"ensure_ascii": False})
         if not code:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         screen_shot = AutoScreenshot(code=code)
         results = asyncio.run(screen_shot.run())
-        print(results)
         if not results:
             return JsonResponse({"code": 400, "message": "折扣码无效"})
         return JsonResponse({"code": 200, "message":"成功", "data": [i for i in results]}, json_dumps_params={"ensure_ascii": False})
