@@ -65,7 +65,7 @@ class AutoScreenshot():
         await page.close()
 
     async def run(self):
-            playwright = await async_playwright().start()
+        async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
                 headless=True)
@@ -75,7 +75,6 @@ class AutoScreenshot():
 
             await context.close()
             await browser.close()
-            await playwright.stop()
             return self.results
 
     # async def login_account(self, accounts: list):
