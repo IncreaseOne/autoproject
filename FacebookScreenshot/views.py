@@ -9,27 +9,15 @@ from rest_framework.views import APIView
 from FacebookScreenshot.facebookplaywright import AutoScreenshot
 import asyncio
 
-async def test():
-    return 100
-
-async def run():
-    tasks = [test(), test(), test()]
-    r = await asyncio.gather(*tasks)
-    return r
 
 class Facebook(APIView):
 
-
     def post(self, request):
-
-        result = asyncio.run(run())
-        return JsonResponse({"data":[i for i in result]})
-
         code = request.data.get("code")
         if not code:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         screen_shot = AutoScreenshot(code=code)
-        results =asyncio.run(screen_shot.run())
+        results = asyncio.run(screen_shot.run())
         if not results:
             return JsonResponse({"code": 400, "message": "折扣码无效"})
         return JsonResponse({"code": 200, "message":"成功", "data": [i for i in results]}, json_dumps_params={"ensure_ascii": False})
