@@ -1,5 +1,4 @@
 import os
-import random
 import time
 
 from django.http import JsonResponse, HttpResponse
@@ -27,8 +26,19 @@ class Facebook(APIView):
 
 
     def get(self, request):
-        async def test():
-            name = random.randint(0, 100)
-            return name
-        age = asyncio.run(test())
-        return JsonResponse({"code": 200, "data": age})
+        import asyncio
+
+        from playwright.async_api import async_playwright
+        from playwright.sync_api import sync_playwright
+        def run():
+            playwright = sync_playwright().start()
+            chromium = playwright.chromium  # or "firefox" or "webkit".
+            browser = chromium.launch(
+                headless=True)
+            context = browser.new_context()
+            page = context.new_page()
+            page.goto("https://www.baidu.com")
+            browser.close()
+
+        run()
+        return JsonResponse({"code": 200})
