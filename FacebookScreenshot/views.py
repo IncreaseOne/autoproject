@@ -1,4 +1,5 @@
 import os
+import random
 import time
 
 from django.http import JsonResponse, HttpResponse
@@ -26,4 +27,8 @@ class Facebook(APIView):
 
 
     def get(self, request):
-        return JsonResponse({"code": 200})
+        async def test():
+            name = random.randint(0, 100)
+            return name
+        age = asyncio.run(test())
+        return JsonResponse({"code": 200, "data": age})
