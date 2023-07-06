@@ -34,6 +34,7 @@ class AutoScreenshot():
     async def screenshot(self, context):
         page = await context.new_page()
         await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
+        logging.info(f"{self.code}: 页面渲染完成")
         if await page.get_by_text("展开").count() > 0:
             expands = await page.get_by_text("展开").all()
             for i in expands:
@@ -50,11 +51,12 @@ class AutoScreenshot():
                         await i.click(timeout=3000)
                     except:
                         pass
+        logging.info(f"{self.code}: 页面展开到底部")
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
         for i in need_to_screenshot:
-
             screenshot_bytes = await i.screenshot()
             self.results.append(base64.b64encode(screenshot_bytes).decode("utf-8"))
+        logger.info(f"{self.code}: 任务全部完成")
         await page.close()
 
     async def run(self):
