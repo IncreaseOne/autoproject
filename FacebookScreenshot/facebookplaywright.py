@@ -63,7 +63,6 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                proxy={"server": "http://127.0.0.1:19180"},
                 headless=True)
             context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             await self.screenshot(context)
