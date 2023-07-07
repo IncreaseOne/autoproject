@@ -15,7 +15,7 @@ class Facebook(APIView):
 
     def post(self, request):
         code = request.data.get("code")
-        if not code:
+        if not code or code is "nocode" or code is "no code":
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         screen_shot = AutoScreenshot(code=code)
         results = asyncio.run(screen_shot.run())
