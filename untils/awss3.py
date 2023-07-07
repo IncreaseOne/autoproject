@@ -22,7 +22,7 @@ class S3():
         :return:
         """
         try:
-            self.s3.put_object(Body=img, Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read', Headers={'Accept': 'image/png'})
+            self.s3.put_object(Body=img, Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read', Headers={'Content-Type': 'image/png'})
             logger.info(f"{file_name}上传图片完成")
         except Exception as e:
             logger.info("{}: {}".format(file_name, e))
