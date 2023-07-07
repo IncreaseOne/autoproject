@@ -26,7 +26,7 @@ class S3():
             logger.info(f"{file_name}上传图片完成")
         except Exception as e:
             logger.info("{}: {}".format(file_name, e))
-        return f"{self.AWS_URL}/{file_name}.png"
+        return f"{self.AWS_URL}/{file_name}"
 
 
 
