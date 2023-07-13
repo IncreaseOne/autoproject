@@ -6,17 +6,21 @@ import requests
 data = {
     "data": [
         {
-            "goods_url": "https://www.amazon.com/dp/B0C5RLRFJQ?ref=myi_title_dp",
-            "code": "80D4LPOE"
+            "goods_url": "https://www.amazon.com/dp/B0C149M53B?ref=myi_title_dp&th=1",
+            "code": "TJJ94ZF"
         },
         {
-            "goods_url": "https://www.amazon.com/promocode/A18QZBYWXY63FH",
-            "code": "5019LF1U"
+            "goods_url": "https://www.amazon.com/dp/B0BZYSFHW9",
+            "code": "407B5M68"
         },
         {
-            "goods_url": "https://www.amazon.com/winees-Security-Wireless-Detection-L1/dp/B0BS8Z7GQZ/?maas=maas_adg_7DF32D6807A85CF8D5DDB54623F07D71_afap_abs&ref_=aa_maas&tag=maas",
-            "code": "PG4YPOXE"
+            "goods_url": "https://www.amazon.com/dp/B0C4KK497G?ref=myi_title_dp&th=1",
+            "code": "60Y63XQE"
         },
+        {
+            "goods_url": "https://www.amazon.com/ValueMax-15PC-BBQ-Grilling-Tool/dp/B09FPL2RD4?maas=maas_adg_B289569CC93A1E55FC87670FFDE7439D_afap_abs&ref_=aa_maas&tag=maas",
+            "code": "50RKZ5MR"
+        }
     ]
 }
 r = requests.post(url=" http://127.0.0.1:8000/amazonWebsite/testCode/", json=data)

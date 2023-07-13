@@ -20,7 +20,7 @@ class AmazonAutoTest():
         :params driver 驱动对象
         :params type
     '''
-    proxy = "http://127.0.0.1:19180"
+    proxy = {"server": "http://127.0.0.1:19180"}
     browserLaunchOptionDict = {"headless": False, "proxy": {"server": proxy}}
     pages = []
     status_with_url = []
@@ -292,9 +292,8 @@ class AmazonAutoTest():
     async def do_task(self):
         async with async_playwright() as self.playwright:
             self.chromium = self.playwright.chromium
-            self.browser = await self.chromium.connect_over_cdp(endpoint_url="http://127.0.0.1:9222", slow_mo=5000)
+            self.browser = await self.chromium.launch(proxy=self.proxy, headless=False)
             self.context = await self.browser.new_context(
-                proxy={"server": "http://127.0.0.1:19180"},
                 ignore_https_errors=True,
                 viewport={"width": 1000, "height": 680},
                 user_agent= "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0"

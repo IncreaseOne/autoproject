@@ -87,30 +87,6 @@ class AutoScreenshot():
             logger.info("{}获取失败".format(link_obj.get("link")))
             return link_obj
 
-    # 更正群组链接
-    async def get_real_groups_link(self, links: list):
-        q = queue.Queue()
-        for link in links:
-            q.put(link)
-        async with async_playwright() as playwright:
-            chromium = playwright.chromium
-            browser = await chromium.launch(
-                )
-            context = await browser.new_context()
-            tasks = []
-            while True:
-                if not q:
-                    for i in range(0, 5):
-                        link_obj = q.get()
-                        tasks.append(self.update_link(context, link_obj))
-                else:
-                    if q.empty():
-                        logger.info("全部更替完成")
-                        break;
-                    else:
-                        for i in range(0, q.qsize()):
-                            link_obj = q.get()
-                            tasks.append(self.update_link(context, link_obj))
 
 
 
