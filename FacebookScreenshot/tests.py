@@ -17,12 +17,7 @@
 #
 # run()
 
-def match_groupId(groupId):
-    groupId = str(groupId)
-    for i in [{"link": "href/dsadsa/dsad", "image": "htdadua://www.baidu.com"}]:
-        if i.get("link").find(groupId) != -1:
-            return {groupId:i.get("image")}
-    return {groupId: None}
+abc = [{"link": "hello"}, {"link": "test"}]
 
-r = map(match_groupId, ["dsadsa"])
-print(list(r))
+
+i = {k:v for abcd in abc for k,v in abcd.items()}

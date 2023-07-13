@@ -13,12 +13,13 @@ import asyncio
 
 class Facebook(APIView):
     data = []
+    result_data = {}
 
     def match_groupId(self, groupId):
         groupId = str(groupId)
         for i in Facebook.data:
             if i.get("link").find(groupId) != -1:
-               return {groupId: i.get("image")}
+                return {groupId: i.get("image")}
         return {groupId: None}
 
 
@@ -32,9 +33,9 @@ class Facebook(APIView):
         results = asyncio.run(screen_shot.start_screenshot())
         Facebook.data = [i for i in results]
         result_data = map(self.match_groupId, groupIds)
-
+        result_data = {k:v for item in result_data for k,v in item.items()}
         if not results:
             return JsonResponse({"code": 400, "message": "折扣码无效"})
-        return JsonResponse({"code": 200, "message":"成功", "data": list(result_data)}, json_dumps_params={"ensure_ascii": False})
+        return JsonResponse({"code": 200, "message":"成功", "data": result_data}, json_dumps_params={"ensure_ascii": False})
 
 
