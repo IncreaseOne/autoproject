@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # author：王勇
+import json
+
 import boto3
 import logging
 logger = logging.getLogger(__name__)
@@ -14,7 +16,7 @@ class S3():
         self.AWS_URL = "https://cloud.dealsgot.com"
         self.s3 = boto3.client('s3', region_name=self.CN_REGION_NAME,aws_access_key_id=self.AWS_ACCESS_KEY_ID, aws_secret_access_key=self.AWS_SECRET_ACCESS_KEY)
 
-    def upload_single_file(self, img: bytes, file_name):
+    def upload_single_file(self, obj: dict, file_name):
         """
         上传单个文件
         :param src_local_path:
@@ -22,11 +24,13 @@ class S3():
         :return:
         """
         try:
-            self.s3.put_object(Body=img, Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read')
+            self.s3.put_object(Body=obj.get("image"), Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read')
             logger.info(f"{file_name}上传图片完成")
         except Exception as e:
-            logger.info("{}: {}".format(file_name, e))
-        return f"{self.AWS_URL}/{file_name}"
+            logger.error("{}: {}".format(file_name, e))
+            return None
+        obj["image"] = f"{self.AWS_URL}/{file_name}"
+        return obj
 
 
 

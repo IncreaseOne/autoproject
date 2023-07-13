@@ -192,11 +192,11 @@ LOGGING = {
         }
     },
     'loggers': {
-        # '': {  # The default logger application is configured as follows
-        #     'handlers': ['default', 'console', 'error'],  # You can remove the console when you are online
-        #     'level': 'DEBUG',
-        #     'propagate': True,  # Pass to no higher level logger
-        # },
+        '': {  # The default logger application is configured as follows
+            'handlers': ['default', 'console', 'error'],  # You can remove the console when you are online
+            'level': 'DEBUG',
+            'propagate': True,  # Pass to no higher level logger
+        },
         'collect': {  # The 'collect' logger is also handled separately
             'handlers': ['console', 'collect'],
             'level': 'INFO',

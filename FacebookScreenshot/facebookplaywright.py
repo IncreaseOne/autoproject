@@ -16,8 +16,9 @@ from untils.awss3 import S3
 
 class AutoScreenshot():
     main_page = "https://www.facebook.com"
+    proxy = {"server": "http://127.0.0.1:19180"}
 
-    def __init__(self, code):
+    def __init__(self, code=None):
         self.code = code
         self.results = []
 
@@ -55,11 +56,15 @@ class AutoScreenshot():
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
         for i in need_to_screenshot:
             screenshot_bytes = await i.screenshot()
-            self.results.append(S3().upload_single_file(screenshot_bytes, f"{time.time()}.png"))
+            try:
+                link = await i.get_by_role("link").first.get_attribute("href")
+            except:
+                link = None
+            self.results.append(S3().upload_single_file({"link": link, "image": screenshot_bytes}, f"{time.time()}.png"))
         logger.info(f"{self.code}: 任务全部完成")
         await page.close()
 
-    async def run(self):
+    async def start_screenshot(self):
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
@@ -70,29 +75,42 @@ class AutoScreenshot():
             await browser.close()
             return self.results
 
-    # async def login_account(self, accounts: list):
-    #     q = queue.Queue()
-    #     for account in accounts:
-    #         q.put(account)
-    #     async with async_playwright() as playwright:
-    #         chromium = playwright.chromium
-    #         browser = await chromium.launch(
-    #             proxy={"server": "http://127.0.0.1:19180"})
-    #         context = await browser.new_context()
-    #         tasks = []
-    #         while True:
-    #             if not q
-    #                 for i in range(0, 5):
-    #                     account = q.get()
-    #                     tasks.append(self.login(context, account))
-    #             else:
-    #                 if q.empty():
-    #                     logger.info("全部账号登录成功")
-    #                     break;
-    #                 else:
-    #                     for i in range(0, q.qsize()):
-    #                         account = q.get()
-    #                         tasks.append(self.login(context, account))
+    async def update_link(self, context, link_obj: dict):
+        page = await context.new_page()
+        try:
+            groups_link = await page.get_by_role("article").first.get_by_role("link").first.get_attribute("href")
+            groups_id = re.search("/groups/.+/", groups_link).group()
+            new_link = f"https://www.facebook.com{groups_id}"
+            link_obj["link"] = new_link
+            return link_obj
+        except:
+            logger.info("{}获取失败".format(link_obj.get("link")))
+            return link_obj
+
+    # 更正群组链接
+    async def get_real_groups_link(self, links: list):
+        q = queue.Queue()
+        for link in links:
+            q.put(link)
+        async with async_playwright() as playwright:
+            chromium = playwright.chromium
+            browser = await chromium.launch(
+                )
+            context = await browser.new_context()
+            tasks = []
+            while True:
+                if not q:
+                    for i in range(0, 5):
+                        link_obj = q.get()
+                        tasks.append(self.update_link(context, link_obj))
+                else:
+                    if q.empty():
+                        logger.info("全部更替完成")
+                        break;
+                    else:
+                        for i in range(0, q.qsize()):
+                            link_obj = q.get()
+                            tasks.append(self.update_link(context, link_obj))
 
 
 
