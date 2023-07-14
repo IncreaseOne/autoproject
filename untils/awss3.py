@@ -27,6 +27,7 @@ class S3():
             self.s3.put_object(Body=obj.get("image"), Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read')
             logger.info(f"{self.AWS_URL}/{file_name}上传图片完成")
         except Exception as e:
+            logger.info(f"{self.AWS_URL}/{file_name}上传图片失败")
             logger.error("{}: {}".format(file_name, e))
             return None
         obj["image"] = f"{self.AWS_URL}/{file_name}"

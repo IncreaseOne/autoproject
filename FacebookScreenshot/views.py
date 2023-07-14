@@ -18,6 +18,8 @@ class Facebook(APIView):
     def match_groupId(self, groupId):
         groupId = str(groupId)
         for i in Facebook.data:
+            if not i.get("link"):
+                return {groupId: None}
             if i.get("link").find(groupId) != -1:
                 return {groupId: i.get("image")}
         return {groupId: None}

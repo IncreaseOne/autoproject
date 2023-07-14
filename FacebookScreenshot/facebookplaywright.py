@@ -55,6 +55,8 @@ class AutoScreenshot():
                     except:
                         pass
         logging.info(f"{self.code}: 页面展开到底部")
+        await page.mouse.wheel(0, 0)
+        logger.info(f"{self.code}: 页面回到顶部")
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
         for i in need_to_screenshot:
             global screenshot_bytes
@@ -62,7 +64,7 @@ class AutoScreenshot():
                 screenshot_bytes = await i.screenshot()
                 link = await i.get_by_role("link").first.get_attribute("href")
             except:
-                link = None
+                link = i.get_by_role("link").first.get_attribute("href")
             self.results.append(S3().upload_single_file({"link": link, "image": screenshot_bytes}, f"{time.time()}.png"))
         logger.info(f"{self.code}: 任务全部完成")
         await page.close()
