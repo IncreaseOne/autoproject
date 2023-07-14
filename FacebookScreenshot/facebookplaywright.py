@@ -56,7 +56,6 @@ class AutoScreenshot():
                         pass
         logging.info(f"{self.code}: 页面展开到底部")
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
-        need_to_screenshot.reverse()
         for i in need_to_screenshot:
             global screenshot_bytes
             try:
