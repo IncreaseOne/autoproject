@@ -29,8 +29,9 @@ class AutoScreenshot():
         await page.fill("#pass", account.get("password"))
         await page.click("//button[@name='login']")
         await expect(page.get_by_label("首页")).to_be_visible(timeout=20000)
+        await context.storage_state(path=f"{BASE_DIR}/login_data_facebook.json")
         await page.close()
-        return context.cookies()
+        return context
 
     async def screenshot(self, context):
         page = await context.new_page()
@@ -68,24 +69,22 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=True)
-            context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
+                headless=False)
+            now_time = time.time()
+            with open(f"{BASE_DIR}/login_data_facebook.json", mode="r") as f:
+                obj = json.load(f)
+                expires = obj["cookies"][1]["expires"]
+            # 如果过期时间小于现在时间，重新登录
+            if now_time > expires:
+                context = await self.login(await browser.new_context(viewport={"width": 1080, "height": 1920}), {"username": "czh18030315579@gmail.com", "password": "chen.1314520"})
+            else:
+                context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             await self.screenshot(context)
             await context.close()
             await browser.close()
             return self.results
 
-    async def update_link(self, context, link_obj: dict):
-        page = await context.new_page()
-        try:
-            groups_link = await page.get_by_role("article").first.get_by_role("link").first.get_attribute("href")
-            groups_id = re.search("/groups/.+/", groups_link).group()
-            new_link = f"https://www.facebook.com{groups_id}"
-            link_obj["link"] = new_link
-            return link_obj
-        except:
-            logger.info("{}获取失败".format(link_obj.get("link")))
-            return link_obj
+
 
 
 
