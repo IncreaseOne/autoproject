@@ -31,10 +31,10 @@ class Facebook(APIView):
         screen_shot = AutoScreenshot(code=code)
         results = asyncio.run(screen_shot.start_screenshot())
         Facebook.data = [i for i in results]
-        logger.info("{}任务返回的数据{}".format(code, Facebook.data))
+        logger.info("{}任务返回的数据:{}".format(code, Facebook.data))
         result_data = map(self.match_groupId, groupIds)
         result_data = {k:v for item in result_data for k,v in item.items()}
-        logger.info("{}返回的数据{}".format(code, result_data))
+        logger.info("{}返回的数据:{}".format(code, result_data))
         if not results:
             return JsonResponse({"code": 400, "message": "折扣码无效"})
         return JsonResponse({"code": 200, "message":"成功", "data": result_data}, json_dumps_params={"ensure_ascii": False})
