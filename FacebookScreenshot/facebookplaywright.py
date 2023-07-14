@@ -61,10 +61,11 @@ class AutoScreenshot():
         for i in need_to_screenshot:
             global screenshot_bytes
             try:
+                await i.scroll_into_view_if_needed()
                 screenshot_bytes = await i.screenshot()
                 link = await i.get_by_role("link").first.get_attribute("href")
-            except:
-                link = i.get_by_role("link").first.get_attribute("href")
+            except Exception as e:
+                logger.error("{}查找link失败:{}".format(self.code, e))
             self.results.append(S3().upload_single_file({"link": link, "image": screenshot_bytes}, f"{time.time()}.png"))
         logger.info(f"{self.code}: 任务全部完成")
         await page.close()
