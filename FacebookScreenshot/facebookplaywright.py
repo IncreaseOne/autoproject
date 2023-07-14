@@ -34,6 +34,7 @@ class AutoScreenshot():
         return context
 
     async def screenshot(self, context):
+
         page = await context.new_page()
         await page.goto(f'https://www.facebook.com/search/top/?q={self.code}', wait_until="domcontentloaded")
         logging.info(f"{self.code}: 页面渲染完成")
@@ -56,8 +57,9 @@ class AutoScreenshot():
         logging.info(f"{self.code}: 页面展开到底部")
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
         for i in need_to_screenshot:
-            screenshot_bytes = await i.screenshot()
+            global screenshot_bytes
             try:
+                screenshot_bytes = await i.screenshot()
                 link = await i.get_by_role("link").first.get_attribute("href")
             except:
                 link = None
@@ -69,7 +71,7 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=False)
+                headless=True)
             now_time = time.time()
             with open(f"{BASE_DIR}/login_data_facebook.json", mode="r") as f:
                 obj = json.load(f)
