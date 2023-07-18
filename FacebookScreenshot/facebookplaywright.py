@@ -17,6 +17,7 @@ from untils.awss3 import S3
 class AutoScreenshot():
     main_page = "https://www.facebook.com"
     proxy = {"server": "http://127.0.0.1:19180"}
+    account = {"username": "czh18030315579@gmail.com", "password": "chen.1314520"}
 
     def __init__(self, code=None):
         self.code = code
@@ -25,8 +26,8 @@ class AutoScreenshot():
     async def login(self, context, account: dict):
         page = await context.new_page()
         await page.goto(self.main_page)
-        await page.fill("#email", account.get("username"))
-        await page.fill("#pass", account.get("password"))
+        await page.type("#email", account.get("username"))
+        await page.type("#pass", account.get("password"))
         await page.click("//button[@name='login']")
         await expect(page.get_by_label("首页")).to_be_visible(timeout=20000)
         await context.storage_state(path=f"{BASE_DIR}/login_data_facebook.json")
@@ -72,7 +73,7 @@ class AutoScreenshot():
 
     async def start_screenshot(self):
         async with async_playwright() as playwright:
-            chromium = playwright.chromium
+            chromium = playwright.webkit
             browser = await chromium.launch(
                 headless=True)
             now_time = time.time()
@@ -81,7 +82,7 @@ class AutoScreenshot():
                 expires = obj["cookies"][1]["expires"]
             # 如果过期时间小于现在时间，重新登录
             if now_time > expires:
-                context = await self.login(await browser.new_context(viewport={"width": 1080, "height": 1920}), {"username": "czh18030315579@gmail.com", "password": "chen.1314520"})
+                context = await self.login(await browser.new_context(viewport={"width": 1080, "height": 1920}), account=self.account)
             else:
                 context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             await self.screenshot(context)
@@ -90,8 +91,12 @@ class AutoScreenshot():
             return self.results
 
 
-
-
-
+    async def start_login(self):
+        async with async_playwright() as playwright:
+            chromium = playwright.chromium
+            browser = await chromium.launch(
+                headless=False)
+            context = await browser.new_context()
+            await self.login(context=context, account=self.account)
 
 

@@ -10,7 +10,7 @@ import logging
 from FacebookScreenshot.facebookplaywright import AutoScreenshot
 import asyncio
 logger = logging.getLogger(__name__)
-
+from playwright import sync_api
 class Facebook(APIView):
     data = []
     result_data = {}
@@ -40,5 +40,10 @@ class Facebook(APIView):
         if not results:
             return JsonResponse({"code": 400, "message": "折扣码无效"})
         return JsonResponse({"code": 200, "message":"成功", "data": result_data}, json_dumps_params={"ensure_ascii": False})
+
+    def get(self, request):
+        screen_shot = AutoScreenshot(code=None)
+        asyncio.run(screen_shot.start_login())
+        return JsonResponse({"code": 200, "message": "登录成功"})
 
 
