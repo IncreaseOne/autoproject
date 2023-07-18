@@ -73,7 +73,7 @@ class AutoScreenshot():
 
     async def start_screenshot(self):
         async with async_playwright() as playwright:
-            chromium = playwright.webkit
+            chromium = playwright.chromium
             browser = await chromium.launch(
                 headless=True)
             now_time = time.time()
@@ -95,7 +95,7 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=False)
+                headless=True)
             context = await browser.new_context()
             await self.login(context=context, account=self.account)
 
