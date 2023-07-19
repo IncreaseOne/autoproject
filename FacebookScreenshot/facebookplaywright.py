@@ -76,7 +76,7 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=False)
+                headless=True)
             now_time = time.time()
             with open(f"{BASE_DIR}/login_data_facebook.json", mode="r") as f:
                 obj = json.load(f)
@@ -96,7 +96,7 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=False)
+                headless=True)
             context = await browser.new_context()
             await self.login(context=context, account=self.account)
 
