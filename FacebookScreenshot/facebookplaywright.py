@@ -61,6 +61,7 @@ class AutoScreenshot():
         need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.code}.*")).all()
         for i in need_to_screenshot:
             global screenshot_bytes
+            global link
             try:
                 await i.scroll_into_view_if_needed()
                 screenshot_bytes = await i.screenshot()
