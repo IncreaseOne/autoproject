@@ -49,8 +49,8 @@ class AutoScreenshot():
         while await page.locator("a", has_text="了解更多").is_visible(timeout=3000) is False:
             await page.mouse.wheel(0, 500)
             if await page.get_by_text("展开").count() > 0:
-                zankai = await page.get_by_text("展开").all()
-                for i in zankai:
+                expands = await page.get_by_text("展开").all()
+                for i in expands:
                     try:
                         await i.click(timeout=3000)
                     except:
