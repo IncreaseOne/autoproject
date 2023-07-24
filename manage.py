@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+import asyncio
 import os
 import sys
+import schedule
+
+from FacebookScreenshot.facebookplaywright import AutoScreenshot
 
 _name = 100
 
@@ -19,5 +23,10 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+def login_facebook():
+    screen_shot = AutoScreenshot(code=None)
+    asyncio.run(screen_shot.start_login())
+
 if __name__ == '__main__':
+    schedule.every(3).days.do(login_facebook, "每三天登录一次")
     main()

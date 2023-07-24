@@ -24,6 +24,7 @@ class AutoScreenshot():
         self.results = []
 
     async def login(self, context, account: dict):
+        logger.info("开始登录")
         page = await context.new_page()
         await page.goto(self.main_page)
         await page.type("#email", account.get("username"))
@@ -32,6 +33,7 @@ class AutoScreenshot():
         await expect(page.get_by_label("首页")).to_be_visible(timeout=20000)
         await context.storage_state(path=f"{BASE_DIR}/login_data_facebook.json")
         await page.close()
+        logger.info("登录成功")
         return context
 
     async def screenshot(self, context):
