@@ -134,7 +134,6 @@ tqdm
 trio
 trio-websocket
 Twisted
-twisted-iocpsupport
 typing_extensions
 tzdata
 tzlocal
