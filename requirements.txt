@@ -41,8 +41,6 @@ frozenlist
 future
 googletrans
 greenlet
-h11
-h2
 hpack
 hstspreload
 httpcore
@@ -83,7 +81,6 @@ ppft
 prettytable
 Protego
 protobuf
-py
 pyasn1
 pyasn1-modules
 pycparser
