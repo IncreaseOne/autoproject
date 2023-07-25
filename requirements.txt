@@ -64,7 +64,6 @@ lxml
 markdown-it-py
 MarkupSafe
 mdurl
-minium
 mpmath
 multidict
 multiprocess
