@@ -69,7 +69,6 @@ minium
 mpmath
 multidict
 multiprocess
-mysqlclient
 numpy
 onnxruntime
 opencv-python-headless
