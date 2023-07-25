@@ -1,5 +1,6 @@
 aiohttp
 aiosignal
+APScheduler
 asgiref
 async-generator
 async-timeout
@@ -9,6 +10,8 @@ Automat
 axios
 beautifulsoup4
 blinker
+boto3
+botocore
 Brotli
 bs4
 cached-property
@@ -27,7 +30,9 @@ ddddocr
 ddt
 dill
 Django
+django-apscheduler
 django-cors-headers
+django-crontab
 djangorestframework
 et-xmlfile
 filelock
@@ -64,6 +69,7 @@ minium
 mpmath
 multidict
 multiprocess
+mysqlclient
 numpy
 onnxruntime
 opencv-python-headless
@@ -97,6 +103,7 @@ pytest
 pytest-ordering
 pytest-repeat
 pytest-rerunfailures
+python-dateutil
 pytz
 PyYAML
 queuelib
@@ -105,8 +112,10 @@ requests-file
 rfc3986
 rich
 runstats
+s3transfer
 schedule
 Scrapy
+scrapy-zyte-api
 selenium
 service-identity
 simple-tornado
@@ -118,14 +127,18 @@ soupsieve
 sqlparse
 sympy
 tenacity
+tidevice
 tldextract
 tomli
 tornado
 tqdm
 trio
 trio-websocket
+Twisted
+twisted-iocpsupport
 typing_extensions
 tzdata
+tzlocal
 undetected-chromedriver
 urllib3
 w3lib

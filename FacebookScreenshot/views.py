@@ -38,7 +38,7 @@ class Facebook(APIView):
         result_data = {k:v for item in result_data for k,v in item.items()}
         logger.info("{}返回的数据:{}".format(code, result_data))
         if not results:
-            return JsonResponse({"code": 400, "message": "该折扣码未找到任何发帖内容"})
+            return JsonResponse({"code": 400, "message": "请联系管理员"}, json_dumps_params={"ensure_ascii": False})
         return JsonResponse({"code": 200, "message":"成功", "data": result_data}, json_dumps_params={"ensure_ascii": False})
 
     def get(self, request):

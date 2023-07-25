@@ -17,7 +17,4 @@
 #
 # run()
 
-abc = [{"link": "hello"}, {"link": "test"}]
 
-
-i = {k:v for abcd in abc for k,v in abcd.items()}
