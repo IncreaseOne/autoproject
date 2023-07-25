@@ -32,7 +32,6 @@ dill
 Django
 django-apscheduler
 django-cors-headers
-django-crontab
 djangorestframework
 et-xmlfile
 filelock
@@ -133,7 +132,6 @@ tornado
 tqdm
 trio
 trio-websocket
-Twisted
 typing_extensions
 tzdata
 tzlocal
