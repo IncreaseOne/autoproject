@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # author：王勇
 import asyncio
+import json
 import random
 
 from playwright.async_api import async_playwright
@@ -9,6 +10,7 @@ import logging
 from AutoTestCode.settings import AMAZON_ACCOUNT
 from queue import Queue
 
+from AutoTestCode.settings import BASE_DIR
 logger = logging.getLogger(__name__)
 
 
@@ -37,15 +39,19 @@ class AmazonAutoTest():
     async def loginAmazon(self, email, password, page, failed_time=5, country="com"):
         main_page_url = f"https://www.amazon.{country}/?language=US"
         try:
-            await page.goto(main_page_url, timeout=0)
+            await page.goto(main_page_url, timeout=50000, wait_until="domcontentloaded")
             if await page.locator(".nav-bb-right > a").first.is_visible():
                 logger.info("进入非正常页面，正在处理")
                 await page.locator(".nav-bb-right > a").first.click()
+            if await page.locator(".a-column.a-span-last.a-text-right").is_visible():
+                logger.info("需要输入验证码，正在处理...")
+                await page.locator(".a-column.a-span-last.a-text-right").click()
             logger.info("成功进入amazon主页")
             await page.click("span#nav-link-accountList-nav-line-1")
             await page.fill("#ap_email", email)
             await page.click("#continue")
             await page.fill("#ap_password", password)
+            await page.click("[name=rememberMe]")
             await page.click("#signInSubmit")
             await page.wait_for_load_state("domcontentloaded")
             await page.wait_for_timeout(3000)
@@ -53,9 +59,10 @@ class AmazonAutoTest():
                 logger.info("被页面检测， 输入密码， 等待用户输入验证码并确定")
                 await page.fill("#ap_password", password)
             await page.reload()
-            await page.wait_for_selector("#nav-logo", timeout=3000000)
+            await page.wait_for_selector("#nav-logo")
             logger.info("成功登录")
             self.pages.append({"page": page, "country": country})
+            await self.page.context.storage_state(path=f"{BASE_DIR}/TestAmazonCode/login_amazon_com.json")
             return page
         except Exception as e:
             logger.error("登录失败:{}".format(e))
@@ -72,8 +79,9 @@ class AmazonAutoTest():
         @需要参数 email password country code type
     '''
     async def goods_detail(self, page, amazon_info: dict):
+        await page.context.storage_state(path=f"{BASE_DIR}/TestAmazonCode/login_amazon_com.json")
         await page.wait_for_timeout(random.randint(1, 5) * 1000)
-        await page.goto(amazon_info["goods_url"], timeout=50000)
+        await page.goto(amazon_info["goods_url"], wait_until="domcontentloaded")
         if amazon_info["type"] == 2:
             logger.info("检测类型为社交类型")
             await page.locator('#grid > .grid > div').first.click()
@@ -128,13 +136,14 @@ class AmazonAutoTest():
         return page
 
     async def order_detail(self, page, amazon_info: dict):
-        # 如果直接下单的订单需要先取消
+        #如果直接下单的订单需要先取消
         if await page.locator("#prime-interstitial-nothanks-button").count() > 0:
             await page.click("#prime-interstitial-nothanks-button")
-        # 下单后可能需要处理弹框
+        #下单后可能需要处理弹框
         if await page.locator("#action-buttons .prime-no-button").count() > 0:
             await page.locator("#action-buttons .prime-no-button").click()
         await page.wait_for_timeout(10000)
+
         # *** 需要将折扣码的具体测试优化为一个函数
         if await page.locator("#spc-gcpromoinput").count() > 0:
             code_content_before_enter_apply = await page.locator("#spc-order-summary td").all_inner_texts()
@@ -253,6 +262,11 @@ class AmazonAutoTest():
                 logger.info("购物车删除超过失败次数{}".format(e))
 
     async def start_test_code(self, page, amazon_info: dict, failed_time=2):
+        # 先判断amazon_info是否有status
+        if amazon_info.get("status") != None:
+            await page.close()
+            return amazon_info
+
         # 判断当前的url是否被测试，如果被测试过，则直接取出
         for item in self.status_with_url:
             if amazon_info["code"] == item["url"]:
@@ -260,13 +274,13 @@ class AmazonAutoTest():
                 await page.close()
                 return amazon_info
         try:
-            flag = False
-            for p in self.pages:
-                if p["country"] == amazon_info["country"]:
-                    flag = True
-            if flag is False:
-                page = await self.loginAmazon(email=self.username, password=self.password, page=page,
-                                              country=amazon_info["country"])
+            # flag = False
+            # for p in self.pages:
+            #     if p["country"] == amazon_info["country"]:
+            #         flag = True
+            # if flag is False:
+            #     page = await self.loginAmazon(email=self.username, password=self.password, page=page,
+            #                                   country=amazon_info["country"])
             # 开始测试
             page = await self.goods_detail(page, amazon_info)
             page = await self.go_to_cart(page)
@@ -292,17 +306,22 @@ class AmazonAutoTest():
     async def do_task(self):
         async with async_playwright() as self.playwright:
             self.chromium = self.playwright.chromium
-            self.browser = await self.chromium.launch(proxy=self.proxy, headless=False)
+            self.browser = await self.chromium.launch(headless=False)
             self.context = await self.browser.new_context(
                 ignore_https_errors=True,
                 viewport={"width": 1000, "height": 680},
-                user_agent= "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0"
+                user_agent= "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0",
+                storage_state= f"{BASE_DIR}/TestAmazonCode/login_amazon_com.json"
             )
+            # with open(f"{BASE_DIR}/TestAmazonCode/login_amazon_com.json", mode="r") as f:
+            #     self.storage = json.load(f)
             # 先登录，通过上下文缓存登录状态
             self.page = await self.context.new_page()
-            status = await self.loginAmazon(self.username, self.password, self.page)
-            if status is None:
-                return "登录未成功，请手动处理"
+            await self.page.goto("https://www.amazon.com")
+            # status = await self.loginAmazon("15071094833", "2894232wy", self.page)
+            # if not status:
+            #
+            #     return "登录失败"
             logging.info("开始任务前，先清除购物车")
             await self.delete_all_goods()
             while True:
@@ -311,11 +330,11 @@ class AmazonAutoTest():
                     break
                 else:
                     tasks = []
-                    if self.q.qsize() < 5:
+                    if self.q.qsize() < 2:
                         for i in range(0, self.q.qsize()):
                             tasks.append(self.start_test_code(await self.context.new_page(), self.q.get()))
                     else:
-                        for j in range(0, 5):
+                        for j in range(0, 2):
                             tasks.append(self.start_test_code(await self.context.new_page(), self.q.get()))
                     result = await asyncio.gather(*tasks)
                     self.results.extend(result)

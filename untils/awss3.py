@@ -16,7 +16,7 @@ class S3():
         self.AWS_URL = "https://cloud.dealsgot.com"
         self.s3 = boto3.client('s3', region_name=self.CN_REGION_NAME,aws_access_key_id=self.AWS_ACCESS_KEY_ID, aws_secret_access_key=self.AWS_SECRET_ACCESS_KEY)
 
-    def upload_single_file(self, obj: dict, file_name):
+    def upload_single_file(self, image, file_name):
         """
         上传单个文件
         :param src_local_path:
@@ -24,14 +24,13 @@ class S3():
         :return:
         """
         try:
-            self.s3.put_object(Body=obj.get("image"), Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read', ContentType="binary/image")
+            self.s3.put_object(Body=image, Bucket=self.BUCKET_NAME, Key=file_name, ACL='public-read', ContentType="binary/image")
             logger.info(f"{self.AWS_URL}/{file_name}上传图片完成")
         except Exception as e:
             logger.info(f"{self.AWS_URL}/{file_name}上传图片失败")
             logger.error("{}: {}".format(file_name, e))
             return None
-        obj["image"] = f"{self.AWS_URL}/{file_name}"
-        return obj
+        return f"{self.AWS_URL}/{file_name}"
 
 
 
@@ -46,8 +45,4 @@ class S3():
 
 
 
-if __name__ == "__main__":
 
-    path_local = './facebook.py'
-    path_s3 = 'rootkey.csv'  # s3路径不存在则自动创建
-    upload_single_file("./1688693442.6108813.png", r"test.png")

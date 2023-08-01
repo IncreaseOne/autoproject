@@ -11,34 +11,36 @@ from FacebookScreenshot.facebookplaywright import AutoScreenshot
 import asyncio
 logger = logging.getLogger(__name__)
 from playwright import sync_api
+from untils.awss3 import S3
 class Facebook(APIView):
-    data = []
-    result_data = {}
+    groupIds = []
+    S3 = S3()
 
-    def match_groupId(self, groupId):
-        groupId = str(groupId)
-        for i in Facebook.data:
-            if not i.get("link"):
-                return {groupId: None}
-            if i.get("link").find(groupId) != -1:
-                return {groupId: i.get("image")}
-        return {groupId: None}
+    def match_groupId(self, result_data_Item):
+        link = result_data_Item.get("link")
+        image_name = result_data_Item.get("image_name")
+        image = result_data_Item.get("image")
+        for groupId in self.groupIds:
+            if link != None and link.find(str(groupId)) != -1:
+                url_name = self.S3.upload_single_file(image, file_name=image_name)
+                return {groupId: url_name}
+
+
 
 
     def post(self, request):
         code = request.data.get("code")
-        groupIds = request.data.get("groupIds")
-        if not code or not groupIds or code == "nocode" or code == "no code":
+        self.groupIds = request.data.get("groupIds")
+        if not code or not self.groupIds or code == "nocode" or code == "no code":
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         screen_shot = AutoScreenshot(code=code)
         results = asyncio.run(screen_shot.start_screenshot())
-        Facebook.data = [i for i in results]
-        logger.info("{}任务返回的数据:{}".format(code, Facebook.data))
-        result_data = map(self.match_groupId, groupIds)
-        result_data = {k:v for item in result_data for k,v in item.items()}
-        logger.info("{}返回的数据:{}".format(code, result_data))
         if not results:
-            return JsonResponse({"code": 400, "message": "请联系管理员"}, json_dumps_params={"ensure_ascii": False})
+            return JsonResponse({"code": 400, "message": "请检查折扣码是否正常然后联系管理员"}, json_dumps_params={"ensure_ascii": False})
+        data = [i for i in results]
+        result_data = map(self.match_groupId, data)
+        result_data = { k:v for i in list(result_data) if i != None for k,v in i.items() }
+        logger.info("{}返回的数据:{}".format(code, result_data))
         return JsonResponse({"code": 200, "message":"成功", "data": result_data}, json_dumps_params={"ensure_ascii": False})
 
     def get(self, request):

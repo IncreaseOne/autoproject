@@ -1,29 +1,35 @@
+import asyncio
 import json
+import re
 
 from django.test import TestCase
 
 # Create your tests here.
 # import requests
-#
-# data = {
-#     "data": [
-#         {
-#             "goods_url": "https://www.amazon.com/dp/B0C149M53B?ref=myi_title_dp&th=1",
-#             "code": "TJJ94ZF"
-#         },
-#         {
-#             "goods_url": "https://www.amazon.com/dp/B0BZYSFHW9",
-#             "code": "407B5M68"
-#         },
-#         {
-#             "goods_url": "https://www.amazon.com/dp/B0C4KK497G?ref=myi_title_dp&th=1",
-#             "code": "60Y63XQE"
-#         },
-#         {
-#             "goods_url": "https://www.amazon.com/ValueMax-15PC-BBQ-Grilling-Tool/dp/B09FPL2RD4?maas=maas_adg_B289569CC93A1E55FC87670FFDE7439D_afap_abs&ref_=aa_maas&tag=maas",
-#             "code": "50RKZ5MR"
-#         }
-#     ]
-# }
-# r = requests.post(url=" http://127.0.0.1:8000/amazonWebsite/testCode/", json=data)
-# print(r.text)
+from playwright.async_api import async_playwright
+
+
+async def do_task():
+    async with async_playwright() as playwright:
+        chromium = playwright.chromium
+        browser = await chromium.launch(headless=False)
+        context = await browser.new_context(
+            ignore_https_errors=True,
+            viewport={"width": 1000, "height": 680},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0",
+            # storage_state= f"{BASE_DIR}/TestAmazonCode/login_amazon_com.json"
+        )
+        # with open(f"{BASE_DIR}/TestAmazonCode/login_amazon_com.json", mode="r") as f:
+        #     self.storage = json.load(f)
+        # 先登录，通过上下文缓存登录状态
+        page = await context.new_page()
+        await page.goto(r"D:\vue_test\正则学习\匹配文本.html", timeout=50000, wait_until="domcontentloaded")
+        if await page.locator(".nav-bb-right > a").first.is_visible():
+            print("进入非正常页面，正在处理")
+            await page.locator(".nav-bb-right > a").first.click()
+        if await page.locator(".a-column.a-span-last.a-text-right").is_visible():
+            print("需要输入验证码，正在处理...")
+            await page.locator(".a-column.a-span-last.a-text-right").click()
+        print("成功进入amazon主页")
+
+asyncio.run(do_task())

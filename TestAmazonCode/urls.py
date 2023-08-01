@@ -3,7 +3,7 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import testCode
+from .views import AmazonWebSite
 urlpatterns = [
-    path('testCode/', testCode)
+    path('testCode/', AmazonWebSite.as_view())
 ]
