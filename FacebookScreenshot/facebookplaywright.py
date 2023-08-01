@@ -39,7 +39,7 @@ class AutoScreenshot():
     async def screenshot(self, context):
 
         page = await context.new_page()
-        await page.goto(f'https://www.facebook.com/search/posts/?q={self.code}', wait_until="domcontentloaded")
+        await page.goto(f'https://www.facebook.com/search/posts/?q={self.code}&filters=eyJyZWNlbnRfcG9zdHM6MCI6IntcIm5hbWVcIjpcInJlY2VudF9wb3N0c1wiLFwiYXJnc1wiOlwiXCJ9In0%3D')
         logging.info(f"{self.code}: 页面渲染完成")
         if await page.get_by_text("展开").count() > 0:
             expands = await page.get_by_text("展开").all()
