@@ -82,7 +82,7 @@ class Facebook(APIView):
         screen_shot = AutoScreenshot(search=search, orderId=orderId)
         results = asyncio.run(screen_shot.start_screenshot())
         if not results:
-            return JsonResponse({"code": 400, "message": "请检查折扣码是否正常然后联系管理员"}, json_dumps_params={"ensure_ascii": False})
+            return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"}, json_dumps_params={"ensure_ascii": False})
         self.data = [i for i in results]
         result_data = map(self.match_groupId, groupIds)
         result_data = list(result_data)
