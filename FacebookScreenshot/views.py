@@ -44,11 +44,11 @@ class Facebook(APIView):
             if str(result.get("link")).find(str(groupId)) != -1:
                 count.append(result)
         if len(count) == 0:
-            return {"link":None, "groupId":groupId, "timestmp":time.time()}
+            return {"link":None, "groupId":groupId, "timestamp":time.time()}
         elif len(count) == 1:
             image_name = self.S3.upload_single_file(image=count[0].get("image"), file_name=count[0].get("image_name"))
             get_timestmp(count[0])
-            return {"link":image_name, "groupId":groupId, "timestmp":count[0].get("date")}
+            return {"link":image_name, "groupId":groupId, "timestamp":count[0].get("date")}
         # 存在重复的折扣码截图, 取时间最早的
         else:
             max = count[0]
@@ -61,7 +61,7 @@ class Facebook(APIView):
                 if float(count[i].get("date")) < float(count[i+1].get("date")):
                     max = count[i+1]
             image_name = self.S3.upload_single_file(max.get("image"), max.get("image_name"))
-            return {"link":image_name, "groupId":groupId, "timestmp":max.get("date")}
+            return {"link":image_name, "groupId":groupId, "timestamp":max.get("date")}
 
 
 
