@@ -16,20 +16,14 @@
 #
 #
 # run()
-groupIds = ["dsa", "dasd", "dsad", "dsa"]
-def match_groupId(result_data_Item):
-    link = result_data_Item.get("link")
-    image_name = result_data_Item.get("image_name")
-    image = result_data_Item.get("image")
-    for groupId in groupIds:
-        if link != None and link.find(groupId) != -1:
-            return {groupId: "hello"}
+import datetime
+import time
 
-result_data = list(map(match_groupId, [{"link": None, "image_name":12, "image": 12}, {"link": "dsa", "image_name":12, "image": 12}]))
 
-result_data = { k:v for i in list(result_data) if i != None for k,v in i.items() }
-print(result_data)
-
+# page.goto("https://www.facebook.com")
+#
+# # Stop tracing and export it into a zip archive.
+# context.tracing.stop(path = "trace.zip")
 
 
 
