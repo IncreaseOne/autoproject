@@ -51,7 +51,7 @@ class AutoScreenshot():
                     await i.click()
                 except:
                     pass
-        while await page.locator("span", has_text=re.compile(".*已经到底啦~.*|.*找不到任何结果.*|.*加入或登录 Facebook.*")).is_visible(timeout=3000) is False:
+        while await page.locator("span", has_text=re.compile(".*已经到底啦~.*|.*找不到任何结果.*|.*加入或登录 Facebook.*|.*你的帐户已锁定.*")).is_visible(timeout=3000) is False:
             await page.mouse.wheel(0, 500)
             if await page.get_by_text("展开").count() > 0:
                 expands = await page.get_by_text("展开").all()
@@ -86,7 +86,7 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=True)
+                headless=False)
             now_time = time.time()
             with open(f"{BASE_DIR}/login_data_facebook.json", mode="r") as f:
                 obj = json.load(f)
