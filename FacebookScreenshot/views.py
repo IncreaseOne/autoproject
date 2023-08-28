@@ -31,8 +31,9 @@ class Facebook(APIView):
                 days = re.search("(?P<days>\d*)天", obj.get("date")).group("days")
                 obj["date"] = now - int(days) * 24 * 3600
             elif re.search("^\d*月\d*日", obj.get("date")) != None:
+                date_time = re.search("^(?P<date>\d*月\d*日)*", obj.get('date')).group("date")
                 current_year = datetime.datetime.now().year
-                date = f"{current_year}年{obj.get('date')}"
+                date = f"{current_year}年{date_time}"
                 obj["date"] = time.mktime(time.strptime(date, "%Y年%m月%d日"))
             elif obj.get("date").find("年") != None:
                 obj["date"] = time.mktime(time.strptime(i.get("date"), "%Y年%m月%d日"))
