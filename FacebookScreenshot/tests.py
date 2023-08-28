@@ -1,31 +1,18 @@
-# from playwright.sync_api import sync_playwright
-#
-#
-# def run():
-#     playwright = sync_playwright().start()
-#     chromium = playwright.chromium  # or "firefox" or "webkit".
-#     browser = chromium.launch(
-#         proxy={'server': 'http://127.0.0.1:19180'},
-#         headless=True)
+import re
+
+from playwright.sync_api import Playwright, sync_playwright, expect
+
+
+# def run(playwright: Playwright) -> None:
+#     browser = playwright.chromium.launch(headless=False, proxy={"server": "http://127.0.0.1:19180"})
 #     context = browser.new_context()
 #     page = context.new_page()
-#     page.goto(r"https://www.facebook.com/groups/1673433336025800/about")
-#     e = page.locator("div[aria-label='Accessible login button']")
-#     print(e)
+#     page.goto("https://rkf2ppgd6v.feishu.cn/sheets/shtcnsOoF4zcXIPOibma5F2Tx13")
+#     with page.expect_download() as download_info:
+#         content = page.locator("div").filter(has_text=re.compile(r"^弹性小狗项圈\.mp4单元格内容以文本形式存储$")).inner_html()
+#     context.close()
 #     browser.close()
+
 #
-#
-# run()
-import datetime
-import time
-
-
-# page.goto("https://www.facebook.com")
-#
-# # Stop tracing and export it into a zip archive.
-# context.tracing.stop(path = "trace.zip")
-
-
-
-
-
+# with sync_playwright() as playwright:
+#     run(playwright)

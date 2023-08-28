@@ -73,7 +73,6 @@ class Facebook(APIView):
 
 
     def post(self, request):
-        print(request.data)
         groupIds = request.data.get("groupIds")
         search = request.data.get("search")
         orderId = request.data.get("orderId")

@@ -9,7 +9,6 @@ import time
 import logging
 from playwright.async_api import async_playwright, expect
 from apscheduler.schedulers.background import BackgroundScheduler
-
 from AutoTestCode.settings import BASE_DIR
 
 logger = logging.getLogger(__name__)
@@ -51,6 +50,7 @@ class AutoScreenshot():
                     await i.click()
                 except:
                     pass
+        move_wheel_before = time.time()
         while await page.locator("span", has_text=re.compile(".*已经到底啦~.*|.*找不到任何结果.*|.*加入或登录 Facebook.*|.*你的帐户已锁定.*")).is_visible(timeout=3000) is False:
             await page.mouse.wheel(0, 500)
             if await page.get_by_text("展开").count() > 0:
@@ -60,6 +60,9 @@ class AutoScreenshot():
                         await i.click(timeout=3000)
                     except:
                         pass
+            elif time.time() - move_wheel_before > 300:
+                return False
+
         logging.info(f"{self.search}: 页面展开到底部")
         await page.mouse.wheel(0, 0)
         logger.info(f"{self.search}: 页面回到顶部")
@@ -86,7 +89,7 @@ class AutoScreenshot():
         async with async_playwright() as playwright:
             chromium = playwright.chromium
             browser = await chromium.launch(
-                headless=False)
+                headless=True)
             now_time = time.time()
             with open(f"{BASE_DIR}/login_data_facebook.json", mode="r") as f:
                 obj = json.load(f)
