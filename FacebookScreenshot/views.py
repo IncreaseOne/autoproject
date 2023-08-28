@@ -30,8 +30,8 @@ class Facebook(APIView):
             elif obj.get("date").find("天") != -1:
                 days = re.search("(?P<days>\d*)天", obj.get("date")).group("days")
                 obj["date"] = now - int(days) * 24 * 3600
-            elif re.search("^\d*月\d*日", obj.get("date")) != None:
-                date_time = re.search("^(?P<date>\d*月\d*日)*", obj.get('date')).group("date")
+            elif re.search("\d*月\d*日", obj.get("date")) != None:
+                date_time = re.search("(?P<date>\d*月\d*日)", obj.get('date')).group("date")
                 current_year = datetime.datetime.now().year
                 date = f"{current_year}年{date_time}"
                 obj["date"] = time.mktime(time.strptime(date, "%Y年%m月%d日"))
@@ -56,9 +56,8 @@ class Facebook(APIView):
             for i in count:
                 # 先转为时间戳
                 get_timestmp(i)
-
             # 得到最大的时间戳
-            for i in range(0, len(count)):
+            for i in range(0, len(count)-1):
                 if float(count[i].get("date")) < float(count[i+1].get("date")):
                     max = count[i+1]
             image_name = self.S3.upload_single_file(max.get("image"), max.get("image_name"))
