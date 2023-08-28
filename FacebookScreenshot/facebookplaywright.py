@@ -33,7 +33,7 @@ class AutoScreenshot():
         await page.type("#pass", account.get("password"))
         await page.click("//button[@name='login']")
         await expect(page.locator("a[aria-label='首页']")).to_be_visible(timeout=20000)
-        await context.storage_state(path=f"{BASE_DIR}/login_data_facebook.json")
+        await context.storage_state(path=f"{BASE_DIR}/login_data/login_data_facebook.json")
         await page.close()
         logger.info("登录成功")
         return context
@@ -91,14 +91,14 @@ class AutoScreenshot():
             browser = await chromium.launch(
                 headless=True)
             now_time = time.time()
-            with open(f"{BASE_DIR}/login_data_facebook.json", mode="r") as f:
+            with open(f"{BASE_DIR}/login_data/login_data_facebook.json", mode="r") as f:
                 obj = json.load(f)
                 expires = obj["cookies"][1]["expires"]
             # 如果过期时间小于现在时间，重新登录
             if now_time > expires:
                 context = await self.login(await browser.new_context(viewport={"width": 1080, "height": 2920}), account=self.account)
             else:
-                context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
+                context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             #开始追踪
             await context.tracing.start(screenshots=True, snapshots=True, sources=True)
             await self.screenshot(context)
