@@ -66,7 +66,7 @@ class AutoScreenshot():
         logging.info(f"{self.search}: 页面展开到底部")
         await page.mouse.wheel(0, 0)
         logger.info(f"{self.search}: 页面回到顶部")
-        need_to_screenshot = await page.get_by_role(role="article").filter(has_text=re.compile(f".*{self.search}.*")).all()
+        need_to_screenshot = await page.get_by_role(role="article").filter(has_text=self.search).all()
         if need_to_screenshot == []:
             return False
         for i in need_to_screenshot:

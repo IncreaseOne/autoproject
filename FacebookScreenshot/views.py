@@ -36,7 +36,7 @@ class Facebook(APIView):
                 date = f"{current_year}年{date_time}"
                 obj["date"] = time.mktime(time.strptime(date, "%Y年%m月%d日"))
             elif obj.get("date").find("年") != None:
-                obj["date"] = time.mktime(time.strptime(i.get("date"), "%Y年%m月%d日"))
+                obj["date"] = time.mktime(time.strptime(obj.get("date"), "%Y年%m月%d日"))
             else:
                 obj["date"] = now
         count = []
