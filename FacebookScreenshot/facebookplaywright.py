@@ -42,6 +42,7 @@ class AutoScreenshot():
 
         page = await context.new_page()
         await page.goto(f'https://www.facebook.com/search/posts/?q={self.search}&filters=eyJyZWNlbnRfcG9zdHM6MCI6IntcIm5hbWVcIjpcInJlY2VudF9wb3N0c1wiLFwiYXJnc1wiOlwiXCJ9In0%3D')
+        await page.mouse.move(600, 600)
         logging.info(f"{self.search}: 页面渲染完成")
         if await page.get_by_text("展开").count() > 0:
             expands = await page.get_by_text("展开").all()
