@@ -16,8 +16,7 @@ import time
 #     browser.close()
 #
 # run(sync_playwright().start())
-
-print(time.mktime(time.strptime("2019年12月22日", "%Y年%m月%d日")))
+print("20分钟".find("年") != None)
 
 
 

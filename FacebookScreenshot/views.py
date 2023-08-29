@@ -35,7 +35,7 @@ class Facebook(APIView):
                 current_year = datetime.datetime.now().year
                 date = f"{current_year}年{date_time}"
                 obj["date"] = time.mktime(time.strptime(date, "%Y年%m月%d日"))
-            elif obj.get("date").find("年") != None:
+            elif obj.get("date").find("年") != -1:
                 obj["date"] = time.mktime(time.strptime(obj.get("date"), "%Y年%m月%d日"))
             else:
                 obj["date"] = now
