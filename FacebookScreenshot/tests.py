@@ -22,6 +22,19 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 
 
 
+import os
+
+list_files = os.listdir(path=r"F:\AutoTestCode\log")
+
+for i in list_files:
+    re_date = re.search("(?P<date>[\d|-]*).log", i)
+    if re_date != None:
+        date = re_date.group("date")
+        timestamp = time.mktime(time.strptime(date, "%Y-%m-%d"))
+        if time.time() - timestamp > 24*3600*10:
+            os.remove(os.path.join("F:\AutoTestCode\log", i))
+            print("删除成功"+os.path.join("F:\AutoTestCode\log", i))
+
 
 
 
