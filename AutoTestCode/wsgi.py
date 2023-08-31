@@ -50,7 +50,6 @@ def remove_log():
             trace_file_create_time = os.path.getctime(trace_path)
             if time.time() - trace_file_create_time > 24 * 3600 * 10:
                 os.remove(trace_path)
-remove_log()
 
 def login_facebook():
     screen_shot = AutoScreenshot()
