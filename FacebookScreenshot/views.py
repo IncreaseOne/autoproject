@@ -1,8 +1,10 @@
 import datetime
+import json
 import os
 import re
 import time
 
+import requests
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
@@ -14,6 +16,7 @@ import asyncio
 logger = logging.getLogger(__name__)
 from playwright import sync_api
 from untils.awss3 import S3
+import threading
 class Facebook(APIView):
     data = []
     S3 = S3()
@@ -64,8 +67,23 @@ class Facebook(APIView):
             return {"link":image_name, "groupId":groupId, "timestamp":max.get("date")}
 
 
-
-
+    def screen_shot_missing(self, **kwargs):
+        screen_shot = AutoScreenshot(search=kwargs.get("search"), orderId=kwargs.get("orderId"))
+        results = asyncio.run(screen_shot.start_screenshot())
+        if not results:
+            return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
+                                json_dumps_params={"ensure_ascii": False})
+        self.data = [i for i in results]
+        result_data = map(self.match_groupId, kwargs.get("groupIds"))
+        result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
+        kwargs["result_data"] = result_data
+        logger.info("{}返回的数据:{}".format(kwargs.get("search"), result_data))
+        for i in range(0, 3):
+            response = requests.post(url=kwargs.get("callback_link"), json=kwargs).text
+            logger.info("{}回调返回的数据{}".format(kwargs.get("search"), response))
+            json_res = json.loads(response)
+            if json_res.get("code") == 200:
+                break;
 
 
 
@@ -76,17 +94,17 @@ class Facebook(APIView):
         groupIds = request.data.get("groupIds")
         search = request.data.get("search")
         orderId = request.data.get("orderId")
-        if not search or not groupIds or not orderId:
+        callback_link = request.data.get("callback_link")
+        if not search or not groupIds or not orderId or not callback_link:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
-        screen_shot = AutoScreenshot(search=search, orderId=orderId)
-        results = asyncio.run(screen_shot.start_screenshot())
-        if not results:
-            return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"}, json_dumps_params={"ensure_ascii": False})
-        self.data = [i for i in results]
-        result_data = map(self.match_groupId, groupIds)
-        result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30*24*3600]
-        logger.info("{}返回的数据:{}".format(search, result_data))
-        return JsonResponse({"code": 200, "message":"成功", "data": result_data}, json_dumps_params={"ensure_ascii": False})
+
+        screen_shot_thread = threading.Thread(target=self.screen_shot_missing, kwargs=request.data)
+        screen_shot_thread.start()
+
+        return JsonResponse({"code": 200, "message": "成功"})
+
+
+
 
     def get(self, request):
         screen_shot = AutoScreenshot()

@@ -33,17 +33,24 @@ from AutoTestCode.settings import BASE_DIR
 def remove_log():
     import os
 
-    log_dir = f"{BASE_DIR}\log"
-    list_files = os.listdir(path=log_dir)
+    log_dir = r"{}\log".format(BASE_DIR)
+    trace_dir = r"{}\trace".format(BASE_DIR)
+    log_files = os.listdir(path=log_dir)
+    trace_files = os.listdir(path=trace_dir)
+    for i in log_files:
+        if i.find("init") == -1:
+            log_path = os.path.join(log_dir, i)
+            log_file_create_time = os.path.getctime(log_path)
+            if time.time() - log_file_create_time > 24 * 3600 * 10:
+                os.remove(log_path)
 
-    for i in list_files:
-        re_date = re.search("(?P<date>[\d|-]*).log", i)
-        if re_date != None:
-            date = re_date.group("date")
-            timestamp = time.mktime(time.strptime(date, "%Y-%m-%d"))
-            if time.time() - timestamp > 24 * 3600 * 10:
-                os.remove(os.path.join(log_dir, i))
-
+    for i in trace_files:
+        if i.find("init") == -1:
+            trace_path = os.path.join(trace_dir, i)
+            trace_file_create_time = os.path.getctime(trace_path)
+            if time.time() - trace_file_create_time > 24 * 3600 * 10:
+                os.remove(trace_path)
+remove_log()
 
 def login_facebook():
     screen_shot = AutoScreenshot()
