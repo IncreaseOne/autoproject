@@ -17,9 +17,33 @@ logger = logging.getLogger(__name__)
 from playwright import sync_api
 from untils.awss3 import S3
 import threading
+
+from rest_framework.throttling import BaseThrottle
+
+class FacebookThrottle(BaseThrottle):
+
+    record = []
+
+    def allow_request(self, request, view):
+        orderId = request.data.get("orderId")
+        now = int(time.time())
+        if not self.record:
+            self.record.append({"orderId":orderId, "time": now})
+            return True
+        else:
+            if self.record[0].get("orderId") == orderId and now - self.record[0].get("time") < 120:
+                return False
+            else:
+                self.record[0] = {"search":orderId, "time": now}
+                return True
+
+
+
+
 class Facebook(APIView):
     data = []
     S3 = S3()
+    throttle_classes = (FacebookThrottle,)
 
     def match_groupId(self, groupId):
         groupId = str(groupId)
@@ -67,7 +91,7 @@ class Facebook(APIView):
             return {"link":image_name, "groupId":groupId, "timestamp":max.get("date")}
 
 
-    def screen_shot_missing(self, **kwargs):
+    def screen_shot_task(self, **kwargs):
         screen_shot = AutoScreenshot(search=kwargs.get("search"), orderId=kwargs.get("orderId"))
         results = asyncio.run(screen_shot.start_screenshot())
         if not results:
@@ -98,7 +122,7 @@ class Facebook(APIView):
         if not search or not groupIds or not orderId or not callback_link:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
 
-        screen_shot_thread = threading.Thread(target=self.screen_shot_missing, kwargs=request.data)
+        screen_shot_thread = threading.Thread(target=self.screen_shot_task, kwargs=request.data)
         screen_shot_thread.start()
 
         return JsonResponse({"code": 200, "message": "成功"})

@@ -1,3 +1,4 @@
+import asyncio
 import datetime
 import re
 import threading
@@ -21,15 +22,6 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 #
 # run(sync_playwright().start())
 
-
-
-import os
-
-def test(id, name):
-    print(id, name)
-
-
-thread1 = threading.Thread(target=test, kwargs={"id":"123", "name": "李四"}).start()
 
 
 

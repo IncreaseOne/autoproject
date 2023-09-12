@@ -15,6 +15,8 @@ logger = logging.getLogger(__name__)
 
 import queue
 
+
+
 class AutoScreenshot():
     main_page = "https://www.facebook.com"
     proxy = {"server": "http://127.0.0.1:19180"}
@@ -82,7 +84,10 @@ class AutoScreenshot():
                 date = re.search('.*role="link" tabindex="0"><span>(?P<date>.*?)</span>.*', text).group("date")
             except Exception as e:
                 logger.error("{}查找link失败:{}".format(self.search, e))
-            self.results.append({"image_name": f"{time.time()}.png", "image":screenshot_bytes, "link":link, "date": date})
+            now_time = time.time()
+            image_name = f"{now_time}.png"
+            logger.info("截图成功{}".format(image_name))
+            self.results.append({"image_name": image_name, "image":screenshot_bytes, "link":link, "date": date})
         logger.info(f"{self.search}: 任务全部完成")
         await page.close()
 
