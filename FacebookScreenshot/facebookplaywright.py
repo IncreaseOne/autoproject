@@ -13,7 +13,7 @@ from AutoTestCode.settings import BASE_DIR
 
 logger = logging.getLogger(__name__)
 
-import queue
+
 
 
 
@@ -102,7 +102,7 @@ class AutoScreenshot():
                 expires = obj["cookies"][1]["expires"]
             # 如果过期时间小于现在时间，重新登录
             if now_time > expires:
-                context = await self.login(await browser.new_context(viewport={"width": 1080, "height": 2920}), account=self.account)
+                context = await self.login(await browser.new_context(viewport={"width": 1080, "height": 1920}), account=self.account)
             else:
                 context = await browser.new_context(storage_state=f"{BASE_DIR}/login_data/login_data_facebook.json", viewport={"width": 1080, "height": 1920})
             #开始追踪

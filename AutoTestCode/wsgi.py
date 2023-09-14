@@ -34,7 +34,6 @@ def remove_log():
     import os
 
     log_dir = r"{}/log".format(BASE_DIR)
-    print(log_dir)
     trace_dir = r"{}/trace".format(BASE_DIR)
     log_files = os.listdir(path=log_dir)
     trace_files = os.listdir(path=trace_dir)
@@ -59,3 +58,5 @@ def login_facebook():
 scheduler.add_job(func=login_facebook, trigger="interval", minutes=2880)
 scheduler.add_job(func=remove_log, trigger="interval", minutes=60 * 24 * 5)
 scheduler.start()
+
+

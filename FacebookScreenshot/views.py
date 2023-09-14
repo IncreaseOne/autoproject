@@ -2,6 +2,7 @@ import datetime
 import json
 import os
 import re
+import threading
 import time
 
 import requests
@@ -14,15 +15,17 @@ import logging
 from FacebookScreenshot.facebookplaywright import AutoScreenshot
 import asyncio
 logger = logging.getLogger(__name__)
-from playwright import sync_api
+from multiprocessing import Queue, Process
 from untils.awss3 import S3
-import threading
+
+
 
 from rest_framework.throttling import BaseThrottle
 
 class FacebookThrottle(BaseThrottle):
 
     record = []
+
 
     def allow_request(self, request, view):
         orderId = request.data.get("orderId")
@@ -44,6 +47,9 @@ class Facebook(APIView):
     data = []
     S3 = S3()
     throttle_classes = (FacebookThrottle,)
+    q = Queue()
+    p1 = None
+
 
     def match_groupId(self, groupId):
         groupId = str(groupId)
@@ -91,24 +97,38 @@ class Facebook(APIView):
             return {"link":image_name, "groupId":groupId, "timestamp":max.get("date")}
 
 
-    def screen_shot_task(self, **kwargs):
-        screen_shot = AutoScreenshot(search=kwargs.get("search"), orderId=kwargs.get("orderId"))
-        results = asyncio.run(screen_shot.start_screenshot())
-        if not results:
-            return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
-                                json_dumps_params={"ensure_ascii": False})
-        self.data = [i for i in results]
-        result_data = map(self.match_groupId, kwargs.get("groupIds"))
-        result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
-        kwargs["result_data"] = result_data
-        logger.info("{}返回的数据:{}".format(kwargs.get("search"), result_data))
-        for i in range(0, 3):
-            response = requests.post(url=kwargs.get("callback_link"), json=kwargs).text
-            logger.info("{}回调返回的数据{}".format(kwargs.get("search"), response))
-            json_res = json.loads(response)
-            if json_res.get("code") == 200:
-                break;
+    def screen_shot_task(self, request_data):
+            screen_shot = AutoScreenshot(search=request_data.get("search"), orderId=request_data.get("orderId"))
+            results = asyncio.run(screen_shot.start_screenshot())
+            if not results:
+                return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
+                                    json_dumps_params={"ensure_ascii": False})
+            self.data = [i for i in results]
+            result_data = map(self.match_groupId, request_data.get("groupIds"))
+            result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
+            request_data["result_data"] = result_data
+            logger.info("{}返回的数据:{}".format(request_data.get("search"), result_data))
+            for i in range(0, 3):
+                response = requests.post(url=request_data.get("callback_link"), json=request_data).text
+                logger.info("{}回调返回的数据{}".format(request_data.get("search"), response))
+                json_res = json.loads(response)
+                if json_res.get("code") == 200:
+                    break;
 
+
+    def start_process(self):
+
+        def deal_task():
+            while True:
+                if not Facebook.q.empty():
+                    self.screen_shot_task(Facebook.q.get())
+                else:
+                    break
+
+        if Facebook.p1 is None or Facebook.p1.is_alive() == False:
+            Facebook.p1 = threading.Thread(target=deal_task)
+            Facebook.p1.daemon =True
+            Facebook.p1.start()
 
 
 
@@ -121,11 +141,10 @@ class Facebook(APIView):
         callback_link = request.data.get("callback_link")
         if not search or not groupIds or not orderId or not callback_link:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
-
-        screen_shot_thread = threading.Thread(target=self.screen_shot_task, kwargs=request.data)
-        screen_shot_thread.start()
-
+        Facebook.q.put(request.data)
+        self.start_process()
         return JsonResponse({"code": 200, "message": "成功"})
+
 
 
 

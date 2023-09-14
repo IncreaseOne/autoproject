@@ -36,10 +36,8 @@ class decorator:
 
 
 @decorator.run_failure(times=3)
-def test(name, age):
+def get(name, age):
     t = 8 / random.randint(0, 1)
     return t
 
-
-print(test(18, 78))
 

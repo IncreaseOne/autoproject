@@ -19,6 +19,3 @@
 #
 # asyncio.run(run())
 import re
-import time
-
-print(time.strftime('%Y年%m月%d日%H时:%M分:%S秒'))
