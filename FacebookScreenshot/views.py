@@ -75,7 +75,8 @@ class Facebook(APIView):
         count = []
         for result in self.data:
             #判断是存在在重复的折扣码
-            if str(result.get("link")).find(str(groupId)) != -1 and time.time() - self.execute_time <= 24*60*60*1000:
+            get_timestmp(result)
+            if str(result.get("link")).find(str(groupId)) != -1 and result.get("date") - self.execute_time <= 24*60*60*1000:
                 count.append(result)
         if len(count) == 0:
             return {"link":None, "groupId":groupId, "timestamp":time.time()}
@@ -103,7 +104,7 @@ class Facebook(APIView):
             if not results:
                 return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
                                     json_dumps_params={"ensure_ascii": False})
-            self.execute_time = request_data.get("execute_time")
+            self.execute_time = 1695020400
             self.data = [i for i in results]
             result_data = map(self.match_groupId, request_data.get("groupIds"))
             result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
