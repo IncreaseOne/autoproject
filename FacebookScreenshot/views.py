@@ -75,7 +75,7 @@ class Facebook(APIView):
         count = []
         for result in self.data:
             #判断是存在在重复的折扣码
-            if str(result.get("link")).find(str(groupId)) != -1:
+            if str(result.get("link")).find(str(groupId)) != -1 and time.time() - self.execute_time <= 24*60*60*1000:
                 count.append(result)
         if len(count) == 0:
             return {"link":None, "groupId":groupId, "timestamp":time.time()}
@@ -103,6 +103,7 @@ class Facebook(APIView):
             if not results:
                 return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
                                     json_dumps_params={"ensure_ascii": False})
+            self.execute_time = request_data.get("execute_time")
             self.data = [i for i in results]
             result_data = map(self.match_groupId, request_data.get("groupIds"))
             result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
@@ -140,12 +141,13 @@ class Facebook(APIView):
         search = request.data.get("search")
         orderId = request.data.get("orderId")
         callback_link = request.data.get("callback_link")
-        if not search or not groupIds or not orderId or not callback_link:
+        execute_time = request.data.get("execute_time")
+        if not search or not groupIds or not orderId or not callback_link or not execute_time:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         Facebook.q.put(request.data)
         logger.info("当前剩余任务{}".format(Facebook.q.qsize()))
         self.start_process()
-        return JsonResponse({"code": 200, "message": "成功"})
+        return JsonResponse({"code": 200, "message": "成功", "tasks": Facebook.q.qsize()})
 
 
 
