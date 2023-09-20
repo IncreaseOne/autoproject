@@ -76,7 +76,7 @@ class Facebook(APIView):
         for result in self.data:
             #判断是存在在重复的折扣码
             get_timestmp(result)
-            if str(result.get("link")).find(str(groupId)) != -1 and result.get("date") - self.execute_time <= 24*60*60*1000:
+            if str(result.get("link")).find(str(groupId)) != -1 and result.get("date") - self.execute_time <= 24*60*60:
                 count.append(result)
         if len(count) == 0:
             return {"link":None, "groupId":groupId, "timestamp":time.time()}
