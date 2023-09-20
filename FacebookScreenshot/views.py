@@ -104,7 +104,7 @@ class Facebook(APIView):
             if not results:
                 return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
                                     json_dumps_params={"ensure_ascii": False})
-            self.execute_time = 1695020400
+            self.execute_time = request_data.get("execute_time")
             self.data = [i for i in results]
             result_data = map(self.match_groupId, request_data.get("groupIds"))
             result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
