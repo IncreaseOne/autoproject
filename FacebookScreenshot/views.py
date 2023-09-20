@@ -135,7 +135,7 @@ class Facebook(APIView):
 
 
     def post(self, request):
-        logger.info("自动截图请求参数".format(request.data))
+        logger.info("自动截图请求参数{}".format(request.data))
         groupIds = request.data.get("groupIds")
         search = request.data.get("search")
         orderId = request.data.get("orderId")
@@ -143,7 +143,7 @@ class Facebook(APIView):
         if not search or not groupIds or not orderId or not callback_link:
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         Facebook.q.put(request.data)
-        logger.info("当前剩余任务".format(Facebook.q.qsize()))
+        logger.info("当前剩余任务{}".format(Facebook.q.qsize()))
         self.start_process()
         return JsonResponse({"code": 200, "message": "成功"})
 
