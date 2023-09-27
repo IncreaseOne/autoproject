@@ -40,14 +40,14 @@ def remove_log():
     for i in log_files:
         if i.find("init") == -1:
             log_path = os.path.join(log_dir, i)
-            log_file_create_time = os.path.getctime(log_path)
+            log_file_create_time = os.path.getatime(log_path)
             if time.time() - log_file_create_time > 24 * 3600 * 10:
                 os.remove(log_path)
 
     for i in trace_files:
         if i.find("init") == -1:
             trace_path = os.path.join(trace_dir, i)
-            trace_file_create_time = os.path.getctime(trace_path)
+            trace_file_create_time = os.path.getatime(trace_path)
             if time.time() - trace_file_create_time > 24 * 3600 * 10:
                 os.remove(trace_path)
 
@@ -58,5 +58,7 @@ def login_facebook():
 scheduler.add_job(func=login_facebook, trigger="interval", minutes=2880)
 scheduler.add_job(func=remove_log, trigger="interval", minutes=60 * 24 * 5)
 scheduler.start()
+
+
 
 

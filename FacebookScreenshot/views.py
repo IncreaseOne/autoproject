@@ -74,7 +74,7 @@ class Facebook(APIView):
                 obj["date"] = now
         count = []
         for result in self.data:
-            #判断是存在在重复的折扣码
+            #判断是存在重复的折扣码
             get_timestmp(result)
             if str(result.get("link")).find(str(groupId)) != -1 and result.get("date") >= self.execute_time :
                 count.append(result)
@@ -99,27 +99,29 @@ class Facebook(APIView):
 
 
     def screen_shot_task(self, request_data):
-            screen_shot = AutoScreenshot(search=request_data.get("search"), orderId=request_data.get("orderId"))
-            results = asyncio.run(screen_shot.start_screenshot())
-            if not results:
-                return JsonResponse({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"},
-                                    json_dumps_params={"ensure_ascii": False})
-            self.execute_time = request_data.get("execute_time")
-            self.data = [i for i in results]
-            result_data = map(self.match_groupId, request_data.get("groupIds"))
-            result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
-            request_data["result_data"] = result_data
-            logger.info("{}返回的数据:{}".format(request_data.get("search"), result_data))
+        def callback(json_data: dict):
             for i in range(0, 3):
-                response = requests.post(url=request_data.get("callback_link"), json=request_data).text
+                response = requests.post(url=request_data.get("callback_link"), json=json_data).text
                 logger.info("{}回调返回的数据{}".format(request_data.get("search"), response))
                 json_res = json.loads(response)
                 if json_res.get("code") == 200:
                     break;
+        screen_shot = AutoScreenshot(search=request_data.get("search"), orderId=request_data.get("orderId"))
+        results = asyncio.run(screen_shot.start_screenshot())
+        if not results:
+            logger.info("{}任务执行失败".format(request_data.get("search")))
+            callback({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"})
+            return
+        self.execute_time = request_data.get("execute_time")
+        self.data = [i for i in results]
+        result_data = map(self.match_groupId, request_data.get("groupIds"))
+        result_data = [i for i in result_data if time.time() - i.get("timestamp") < 30 * 24 * 3600]
+        request_data["result_data"] = result_data
+        logger.info("{}返回的数据:{}".format(request_data.get("search"), result_data))
+        callback(request_data)
 
 
     def start_process(self):
-
         def deal_task():
             while True:
                 if not Facebook.q.empty():
