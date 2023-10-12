@@ -62,7 +62,7 @@ class AutoScreenshot():
                         await i.click(timeout=3000)
                     except:
                         pass
-            elif time.time() - move_wheel_before > 300:
+            elif time.time() - move_wheel_before > 600:
                 return False
 
         logging.info(f"{self.search}: 页面展开到底部")

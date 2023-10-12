@@ -19,7 +19,6 @@ from multiprocessing import Queue, Process
 from untils.awss3 import S3
 
 
-
 from rest_framework.throttling import BaseThrottle
 
 class FacebookThrottle(BaseThrottle):
@@ -110,7 +109,7 @@ class Facebook(APIView):
         results = asyncio.run(screen_shot.start_screenshot())
         if not results:
             logger.info("{}任务执行失败".format(request_data.get("search")))
-            callback({"code": 400, "message": "请检查折扣码是否正常或者联系管理员"})
+            callback({"code": 400, "message": "请检查折扣码是否正常或者联系管理员", "result_data": []})
             return
         self.execute_time = request_data.get("execute_time")
         self.data = [i for i in results]
