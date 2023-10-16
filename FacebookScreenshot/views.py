@@ -14,6 +14,9 @@ from rest_framework.views import APIView
 import logging
 from FacebookScreenshot.facebookplaywright import AutoScreenshot
 import asyncio
+
+from untils.exception import throttle_exception
+
 logger = logging.getLogger(__name__)
 from multiprocessing import Queue, Process
 from untils.awss3 import S3
@@ -56,7 +59,7 @@ class Facebook(APIView):
             now = time.time()
             if isinstance(obj.get("date"), (float)):
                 return
-            if obj.get("date").find("小时") != -1:
+            elif obj.get("date").find("小时") != -1:
                 hours = re.search("(?P<hours>\d*)小时", obj.get("date")).group("hours")
                 obj["date"] = now - int(hours) * 3600
             elif obj.get("date").find("天") != -1:
@@ -120,7 +123,7 @@ class Facebook(APIView):
         callback(request_data)
 
 
-    def start_process(self):
+    def start_thread(self):
         def deal_task():
             while True:
                 if not Facebook.q.empty():
@@ -148,10 +151,8 @@ class Facebook(APIView):
             return JsonResponse({"code": 400, "message": "参数传递异常"}, json_dumps_params={"ensure_ascii": False})
         Facebook.q.put(request.data)
         logger.info("当前剩余任务{}".format(Facebook.q.qsize()))
-        self.start_process()
+        self.start_thread()
         return JsonResponse({"code": 200, "message": "成功", "tasks": Facebook.q.qsize()})
-
-
 
 
 
@@ -159,5 +160,10 @@ class Facebook(APIView):
         screen_shot = AutoScreenshot()
         asyncio.run(screen_shot.start_login())
         return JsonResponse({"code": 200, "message": "登录成功"})
+
+
+    def throttled(self, request, wait):
+        raise throttle_exception(message="同一个订单不能重复请求", code=429)
+
 
 
