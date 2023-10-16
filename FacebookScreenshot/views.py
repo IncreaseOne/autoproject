@@ -163,7 +163,7 @@ class Facebook(APIView):
 
 
     def throttled(self, request, wait):
-        raise throttle_exception(message="同一个订单不能重复请求", code=429)
+        raise throttle_exception(message="同一个订单不能重复请求", code=429, result_data=[])
 
 
 
