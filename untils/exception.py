@@ -9,21 +9,22 @@ from rest_framework.utils.serializer_helpers import ReturnList, ReturnDict
 
 
 
+
 class throttle_exception(APIException):
     default_detail = '请求过于频繁'
-    default_code = 429
+    status_code = status.HTTP_429_TOO_MANY_REQUESTS
 
     def __init__(self, message=None, code=429, **kwargs):
-        self.message = message if message != None else  self.default_detail
+        self.message = message if message != None else self.status_code
         self.code = code
         tips = {"code": self.code, "message": self.message}
         tips.update(kwargs)
         self.detail = self._get_error_details(tips, default_code=status.HTTP_429_TOO_MANY_REQUESTS)
 
+
     def _get_error_details(self ,data, default_code=None):
         """
-        Descend into a nested data structure, forcing any
-        lazy translation strings or strings into `ErrorDetail`.
+            重写了_get_error_details
         """
         if isinstance(data, (list, tuple)):
             ret = [
