@@ -12,15 +12,18 @@ from functools import reduce
 #
 # async def test():
 #     async with async_api.async_playwright() as playwright:
-#         launch = await playwright.chromium.launch()
+#         launch = await playwright.chromium.launch(headless=False)
 #         context = await launch.new_context()
 #         page = await context.new_page()
-#         await page.goto("https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gb18030&word=%C3%C0%C5%AE%CD%BC%C6%AC&fr=ala&ala=1&alatpl=normal&pos=0&dyTabStr=MTEsMCwzLDQsMSw2LDUsMiw4LDcsOQ%3D%3D")
-#         inner_html = await page.locator("html").inner_html()
-#         print("<document>"+inner_html+"</document>")
+#         await page.goto("https://www.baidu.com")
+#         await page.type("#kw", "成龙")
+#         await page.click("#su")
+#         await page.wait_for_timeout(10000)
+#         await page.close()
 #
 #
 # asyncio.run(test())
+
 
 
 

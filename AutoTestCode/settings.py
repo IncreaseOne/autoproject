@@ -208,5 +208,14 @@ LOGGING = {
     },
 }
 
+# email设置
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'      #126邮箱的邮箱服务地址
+EMAIL_PORT = 25       #端口，大部分都是默认25
+EMAIL_HOST_USER = '279761649@qq.com'    #这里是你的邮箱账号
+EMAIL_HOST_PASSWORD = 'ugbndktxldpbbgjb'   #注意这里不能用你邮箱账号的密码，而要用申请的设备授权码。
+
+
 
 
